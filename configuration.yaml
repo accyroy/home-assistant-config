@@ -1,4 +1,4 @@
-# test test
+# test test test
 homeassistant:
   # Name of the location where Home Assistant is running
   name: !secret homeassistant_name
