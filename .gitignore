@@ -12,3 +12,6 @@ phue.conf
 pyozw.sqlite
 plex.conf
 .HA_VERSION
+.uuid
+nest.conf
+oldconfig.yaml
