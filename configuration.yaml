@@ -1,0 +1,147 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: !secret homeassistant_name
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret homeassistant_lat
+  longitude: !secret homeassistant_lon
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret homeassistant_elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/London
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_api_password
+  #ssl_certificate: !secret http_ssl_certificate 
+  #ssl_key: !secret http_ssl_key
+
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+#discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+#conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Weather Prediction
+sensor:
+  - platform: yr
+  - platform: mqtt
+    name: "Unit Status"
+    state_topic: "unit/status"
+  - platform: mqtt
+    name: "Unit Temperature"
+    state_topic: "unit/temperature"
+    unit_of_measurement: "°C"
+  - platform: mqtt
+    name: "Unit Humidity"
+    state_topic: "unit/humidity"
+    unit_of_measurement: "%"
+    
+binary_sensor:
+  - platform: template
+    sensors:
+      unit_online:
+        value_template: "{{ states.sensor.unit_status.state == 'online' }}"
+        sensor_class: connectivity
+        friendly_name: "Unit Status"
+    
+nest:
+  client_id: !secret nest_username
+  client_secret: !secret nest_password
+
+
+climate:
+  platform: nest
+
+
+mqtt:
+  broker: m21.cloudmqtt.com
+  port: 23796
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+
+device_tracker:
+  - platform: owntracks
+    max_gps_accuracy: 200
+
+zone:
+  name: School
+  latitude: !secret zone_lat
+  longitude: !secret zone_lon
+  radius: 200
+  icon: mdi:school
+zone 2:
+  name: Unit
+  latitude: !secret zone2_lat
+  longitude: !secret zone2_lon
+  radius: 100
+  icon: mdi:factory
+zone 3:
+  name: Home
+  latitude: !secret zone3_lat
+  longitude: !secret zone3_lon
+  radius: 100
+  icon: mdi:home-variant
+ 
+zone 4:
+  name: Castle
+  latitude: !secret zone4_lat
+  longitude: !secret zone4_lon
+  radius: 75
+  icon: mdi:beer
+
+
+# Example configuration.yaml entry
+alexa:
+  intents:
+    WhereAreWeIntent:
+      speech:
+        type: plaintext
+        text: >
+          {%- if is_state('device_tracker.roy_thephone', 'home') and
+                 is_state('device_tracker.nina_iphone', 'home') -%}
+            You are both home, you silly billy
+          {%- else -%}
+            Roy is at {{ states("device_tracker.roy_thephone") }}
+            Nina is at {{ states("device_tracker.nina_iphone") }}
+          {% endif %}
+
+    LocateIntent:
+#      action:
+#        service: notify.notify
+#        data_template:
+#          message: The location of {{ User }} has been queried via Alexa.
+      speech:
+        type: plaintext
+        text: >
+          {%- for state in states.device_tracker -%}
+            {%- if state.name.lower() == User.lower() -%}
+              {{ state.name }} is at {{ state.state }}
+            {%- endif -%}
+          {%- else -%}
+            I am sorry, I do not know where {{ User }} is.
+          {%- endfor -%}
+      card:
+        type: simple
+        title: Sample title
+        content: Some more content
