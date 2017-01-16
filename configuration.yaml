@@ -13,10 +13,30 @@ homeassistant:
   time_zone: Europe/London
   customize:
     binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0:
-    hidden: false
-    friendly_name: Dining Room PIR
-    sensor_class: motion
-
+      hidden: false
+      friendly_name: Dining Room PIR
+      sensor_class: motion
+    sensor.fibaro_system_fgms001_motion_sensor_general_4_0:
+      hidden: true
+    sensor.fibaro_system_fgms001_motion_sensor_luminance_4_3:
+      hidden: true
+    sensor.fibaro_system_fgms001_motion_sensor_temperature_4_1:
+      hidden: false
+      friendly_name: Office Temperature
+    sensor.greenwave_powernode_1_port_energy_2_0:
+      hidden: true
+    sensor.greenwave_powernode_1_port_power_2_8:
+      Hidden: false
+      friendly_name: Clock Power
+    sensor.greenwave_powernode_1_port_previous_reading_2_1:
+      hidden: true
+    sensor.greenwave_powernode_1_port_previous_reading_2_9:
+      hidden: true
+    switch.greenwave_powernode_1_port_switch_2_0:
+      hidden: false
+      friendly_name: Clock Monitor
+    
+    
 # Show links to resources in log and frontend
 #introduction:
 
