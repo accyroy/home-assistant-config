@@ -73,6 +73,11 @@ nest:
 
 climate:
   platform: nest
+  
+  
+zwave:
+  usb_path: /dev/ttyACM0
+
 
 
 mqtt:
