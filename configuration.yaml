@@ -11,6 +11,11 @@ homeassistant:
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/London
+  customize:
+    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0:
+    hidden: false
+    friendly_name: Dining Room PIR
+    sensor_class: motion
 
 # Show links to resources in log and frontend
 #introduction:
