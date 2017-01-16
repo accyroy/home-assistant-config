@@ -90,7 +90,10 @@ binary_sensor:
         value_template: "{{ states.sensor.unit_status.state == 'online' }}"
         sensor_class: connectivity
         friendly_name: "Unit Status"
-    
+        
+        
+automation: !include_dir_list automation 
+
 #nest:
 #  client_id: !secret nest_username
 #  client_secret: !secret nest_password
