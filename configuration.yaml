@@ -80,6 +80,16 @@ mqtt:
   port: 23796
   username: !secret mqtt_username
   password: !secret mqtt_password
+  birth_message:
+    topic: 'home/status'
+    payload: 'online'
+    qos: 1
+    retain: true
+  will_message:
+    topic: 'home/status'
+    payload: 'offline'
+    qos: 1
+    retain: true
 
 device_tracker:
   - platform: owntracks
