@@ -1,0 +1,9 @@
+alias: 'Switch Clock On'
+hide_entity: True
+trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
+    state: 'on'
+action:
+  - service: switch.turn_on:
+    entity_id: switch.greenwave_powernode_1_port_switch_2_0
