@@ -106,8 +106,8 @@ zwave:
 
 
 mqtt:
-  broker: m21.cloudmqtt.com
-  port: 23796
+  broker: !secret mqtt_broker
+  port: !secret mqtt_port
   username: !secret mqtt_username
   password: !secret mqtt_password
   birth_message:
@@ -120,6 +120,14 @@ mqtt:
     payload: 'offline'
     qos: 1
     retain: true
+
+alarm_control_panel:
+  - platform: manual
+    name: Alarm
+    code: !secret alarm_control_panel_code
+    pending_time: 10
+    trigger_time: 10
+
 
 device_tracker:
   - platform: owntracks
