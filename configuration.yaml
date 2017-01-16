@@ -76,7 +76,7 @@ binary_sensor:
   
   
 zwave:
-  usb_path: /dev/ttyACM0
+  usb_path: /dev/zwave
 
 
 
