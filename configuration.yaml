@@ -66,13 +66,13 @@ binary_sensor:
         sensor_class: connectivity
         friendly_name: "Unit Status"
     
-nest:
-  client_id: !secret nest_username
-  client_secret: !secret nest_password
+#nest:
+#  client_id: !secret nest_username
+#  client_secret: !secret nest_password
 
 
-climate:
-  platform: nest
+#climate:
+#  platform: nest
   
   
 zwave:
