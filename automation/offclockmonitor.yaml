@@ -6,7 +6,7 @@ trigger:
     to: 'off'
     for:
       minutes: 1
-      seconds:30
+      seconds: 30
 action:
   - service: switch.turn_off
     entity_id: switch.greenwave_powernode_1_port_switch_2_0
