@@ -16,13 +16,24 @@ homeassistant:
       hidden: false
       friendly_name: Dining Room PIR
       sensor_class: motion
+    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0:
+     hidden: false
+     friendly_name: Ninas Room PIR
+     sensor_class: motion    
     sensor.fibaro_system_fgms001_motion_sensor_general_4_0:
       hidden: true
+    sensor.fibaro_system_fgms001_motion_sensor_general_5_0:
+      hidden: true    
     sensor.fibaro_system_fgms001_motion_sensor_luminance_4_3:
+      hidden: true
+    sensor.fibaro_system_fgms001_motion_sensor_luminance_5_3:
       hidden: true
     sensor.fibaro_system_fgms001_motion_sensor_temperature_4_1:
       hidden: false
-      friendly_name: Office Temperature
+      friendly_name: Office Temp
+    sensor.fibaro_system_fgms001_motion_sensor_temperature_5_1:
+      hidden: false      
+      friendly_name: Ninas Room Temp
     sensor.greenwave_powernode_1_port_energy_2_0:
       hidden: true
     sensor.greenwave_powernode_1_port_power_2_8:
@@ -57,6 +68,15 @@ group:
     entities:
       - light.ninas_room
       - media_player.ninas_room
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_5_1
+      
+  roysroom:
+    name: Roys Room
+    view: yes
+    entities:
+      - light.roys_room
+      - media_player.roys_bedroom
 # Checks for available updates
 updater:
 
