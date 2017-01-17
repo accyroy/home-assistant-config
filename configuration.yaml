@@ -12,10 +12,10 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/London
   customize:
-    #Fibaro Motion Node 4 Dining Room
+    #Fibaro Motion Node 4 Office
     binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0:
       hidden: false
-      friendly_name: Dining Room PIR
+      friendly_name: Office PIR
       sensor_class: motion
     sensor.fibaro_system_fgms001_motion_sensor_general_4_0:
       hidden: true      
@@ -106,6 +106,15 @@ http:
   ssl_key: !secret http_ssl_key 
 
 group:
+  office:
+    name: Office
+    view: yes
+    entities:
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_4_1
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
+      - sensor.greenwave_powernode_1_port_power_2_8
+      - switch.greenwave_powernode_1_port_switch_2_0
+
   ninasroom:
     name: Ninas Room
     view: yes
