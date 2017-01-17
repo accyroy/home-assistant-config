@@ -50,7 +50,33 @@ homeassistant:
       hidden: false      
       friendly_name: Kitchen Temp     
       
-      
+    #Fibaro Motion Node 7 Roys Room
+    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0:
+     hidden: false
+     friendly_name: Roys Room PIR
+     sensor_class: motion
+    sensor.fibaro_system_fgms001_motion_sensor_general_7_0:
+      hidden: true    
+    sensor.fibaro_system_fgms001_motion_sensor_luminance_7_3:
+      hidden: true
+    sensor.fibaro_system_fgms001_motion_sensor_temperature_7_1:
+      hidden: false      
+      friendly_name: Roys Room Temp      
+ 
+    #Fibaro Motion Node 8 Bathroom
+    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0:
+     hidden: false
+     friendly_name: Bathroom PIR
+     sensor_class: motion
+    sensor.fibaro_system_fgms001_motion_sensor_general_8_0:
+      hidden: true    
+    sensor.fibaro_system_fgms001_motion_sensor_luminance_8_3:
+      hidden: true
+    sensor.fibaro_system_fgms001_motion_sensor_temperature_8_1:
+      hidden: false      
+      friendly_name: Bathroom Temp      
+ 
+ 
       
     sensor.greenwave_powernode_1_port_energy_2_0:
       hidden: true
@@ -95,6 +121,8 @@ group:
     entities:
       - light.roys_room
       - media_player.roys_bedroom
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_7_1
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0      
 
   kitchen:
     name: Kitchen
@@ -103,7 +131,16 @@ group:
       - light.kitchen
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_6_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
-      
+
+  bathroom:
+    name: Bathroom
+    view: yes
+    entities:
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_8_1
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
+
+
+
 # Checks for available updates
 updater:
 
