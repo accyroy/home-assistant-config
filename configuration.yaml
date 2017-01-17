@@ -50,6 +50,13 @@ http:
   ssl_certificate: !secret http_ssl_certificate
   ssl_key: !secret http_ssl_key 
 
+group:
+  ninasroom:
+    name: Ninas Room
+    view: yes
+    entities:
+      - light.ninas_room
+      - media_player.ninas_room
 # Checks for available updates
 updater:
 
