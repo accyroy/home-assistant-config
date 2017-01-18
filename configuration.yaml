@@ -269,11 +269,11 @@ scene:
     entities:
       light.kitchen:
         state: on
-        transition: 30
+        transition: 5
         brightness: 255
       light.office_desk_lamp:
         state: on
-        transition: 20
+        transition: 5
         brightness: 255
   - name: Bathroom Middle Of Night
     entities:
