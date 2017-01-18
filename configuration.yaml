@@ -192,6 +192,15 @@ homeassistant:
       hidden: true
     light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_6:
       hidden: true
+    sensor.fibaro_system_fgrgbwm441_rgbw_controller_energy_15_0:
+      hidden: true
+    sensor.fibaro_system_fgrgbwm441_rgbw_controller_exporting_15_32:
+      hidden: true
+    sensor.fibaro_system_fgrgbwm441_rgbw_controller_power_15_4:
+      hidden: true
+    sensor.fibaro_system_fgrgbwm441_rgbw_controller_power_15_8:
+      hidden: true
+    
     
     
     switch.everspring_se812_siren_switch_10_0:     
