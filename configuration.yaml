@@ -74,9 +74,49 @@ homeassistant:
       hidden: true
     sensor.fibaro_system_fgms001_motion_sensor_temperature_8_1:
       hidden: false      
-      friendly_name: Bathroom Temp      
+      friendly_name: Bathroom Temp
+      
+    #Fibaro Motion Node 11 Living Room
+    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_11_0:
+     hidden: false
+     friendly_name: Living Room PIR
+     sensor_class: motion
+    sensor.fibaro_system_fgms001_motion_sensor_general_11_0:
+      hidden: true    
+    sensor.fibaro_system_fgms001_motion_sensor_luminance_11_3:
+      hidden: true
+    sensor.fibaro_system_fgms001_motion_sensor_temperature_11_1:
+      hidden: false      
+      friendly_name: Living Room Temp      
+
+    #Fibaro Motion Node 12 Conservatory
+    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0:
+     hidden: false
+     friendly_name: Conservatory PIR
+     sensor_class: motion
+    sensor.fibaro_system_fgms001_motion_sensor_general_12_0:
+      hidden: true    
+    sensor.fibaro_system_fgms001_motion_sensor_luminance_12_3:
+      hidden: true
+    sensor.fibaro_system_fgms001_motion_sensor_temperature_12_1:
+      hidden: false      
+      friendly_name: Conservatory Temp
+
+    #Fibaro Motion Node 13 Front Drive
+    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0:
+     hidden: false
+     friendly_name: Front Drive PIR
+     sensor_class: motion
+    sensor.fibaro_system_fgms001_motion_sensor_general_13_0:
+      hidden: true    
+    sensor.fibaro_system_fgms001_motion_sensor_luminance_13_3:
+      hidden: true
+    sensor.fibaro_system_fgms001_motion_sensor_temperature_13_1:
+      hidden: false      
+      friendly_name: Front Drive Temp
+
  
-    #Fibaro Dimmer Living Room Main Lights
+    #Fibaro Dimmer Node 9 Living Room Main Lights
     light.fibaro_system_fgd212_dimmer_2_level_9_0:
       hidden: false
       friendly_name: Living Room Lights
@@ -106,10 +146,43 @@ homeassistant:
       hidden: true
     sensor.fibaro_system_fgd212_dimmer_2_system_9_12:
       hidden: true
+ 
+    #Fibaro Dimmer Node 14 Entrance Lights
+    light.fibaro_system_fgd212_dimmer_2_level_14_0:
+      hidden: false
+      friendly_name: Entrance Lights
+    light.fibaro_system_fgd212_dimmer_2_level_14_0_2:
+      hidden: true
+    light.fibaro_system_fgd212_dimmer_2_step_size_14_6:
+      hidden: true
+    light.fibaro_system_fgd212_dimmer_2_step_size_14_6_2:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_alarm_level_14_1:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_alarm_type_14_0:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_energy_14_0:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_exporting_14_32:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_heat_14_7:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_power_14_4:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_power_14_8:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_power_management_14_11:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_sourcenodeid_14_2:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_system_14_12:
+      hidden: true 
+ 
+ 
       
-      
-      
-      
+    switch.everspring_se812_siren_switch_10_0:     
+      hidden: false  
+      friendly_name: Siren
     
     sensor.greenwave_powernode_1_port_energy_2_0:
       hidden: true
