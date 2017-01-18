@@ -1,0 +1,12 @@
+alias: 'Kitchen Light Off'
+hide_entity: True
+trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
+    to: 'off'
+    for:
+      minutes: 5
+      seconds: 0
+action:
+  - service: light.turn_off
+    entity_id: light.kitchen
