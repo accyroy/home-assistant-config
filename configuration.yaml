@@ -86,7 +86,30 @@ homeassistant:
       hidden: true
     light.fibaro_system_fgd212_dimmer_2_step_size_9_6_2:
       hidden: true
-    
+    sensor.fibaro_system_fgd212_dimmer_2_alarm_level_9_1:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_alarm_type_9_0:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_energy_9_0:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_exporting_9_32:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_heat_9_7:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_power_9_4:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_power_9_8:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_power_management_9_11:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_sourcenodeid_9_2:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_system_9_12:
+      hidden: true
+      
+      
+      
+      
     
     sensor.greenwave_powernode_1_port_energy_2_0:
       hidden: true
