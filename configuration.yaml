@@ -76,8 +76,18 @@ homeassistant:
       hidden: false      
       friendly_name: Bathroom Temp      
  
- 
-      
+    #Fibaro Dimmer Living Room Main Lights
+    light.fibaro_system_fgd212_dimmer_2_level_9_0:
+      hidden: false
+      friendly_name: Living Room Lights
+    light.fibaro_system_fgd212_dimmer_2_level_9_0_2:
+      hidden: true
+    light.fibaro_system_fgd212_dimmer_2_step_size_9_6:
+      hidden: true
+    light.fibaro_system_fgd212_dimmer_2_step_size_9_6_2:
+      hidden: true
+    
+    
     sensor.greenwave_powernode_1_port_energy_2_0:
       hidden: true
     sensor.greenwave_powernode_1_port_power_2_8:
@@ -106,6 +116,12 @@ http:
   ssl_key: !secret http_ssl_key 
 
 group:
+  livingroom:
+    name: Living Room
+    view: yes
+    entities:
+      - light.fibaro_system_fgd212_dimmer_2_level_9_0
+      
   office:
     name: Office
     view: yes
@@ -114,6 +130,8 @@ group:
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
       - sensor.greenwave_powernode_1_port_power_2_8
       - switch.greenwave_powernode_1_port_switch_2_0
+      - light.office
+      - light.office_desk_lamp
 
   ninasroom:
     name: Ninas Room
@@ -147,6 +165,7 @@ group:
     entities:
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_8_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
+      - light.bathroom
 
 
 
