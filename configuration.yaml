@@ -264,6 +264,26 @@ zwave:
   usb_path: /dev/zwave
 
 
+scene:
+  - name: Kitchen Fade On
+    entities:
+      light.kitchen:
+        state: on
+        transition: 30
+        brightness: 255
+      light.office_desk_lamp:
+        state: on
+        transition: 20
+        brightness: 255
+  - name: Bathroom Middle Of Night
+    entities:
+      light.bathroom:
+        state: on
+        transition: 5
+        brightness: 120
+
+
+
 
 mqtt:
   broker: !secret mqtt_broker
