@@ -314,10 +314,10 @@ group:
 
   conservatory:
     name: Conservatory
-      view: yes
-      entities:
-        - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
-        - sensor.fibaro_system_fgms001_motion_sensor_temperature_12_1
+    view: yes
+    entities:
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_12_1
 
   ninasroom:
     name: Ninas Room
