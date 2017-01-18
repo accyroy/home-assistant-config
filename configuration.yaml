@@ -258,11 +258,40 @@ http:
   ssl_key: !secret http_ssl_key 
 
 group:
+
+  downstairs:
+    name: Downstairs
+    view: yes
+    entities:
+      - group.living_room
+      - group.office
+      - group.kitchen
+      - group.conservatory
+      - group.outside
+      
+  upstairs:
+    name: Upstairs
+    view: yes
+    entities:
+      - group.bathroom
+      - group.ninas_room
+      - group.roys_room
+
   livingroom:
     name: Living Room
     view: yes
     entities:
       - light.fibaro_system_fgd212_dimmer_2_level_9_0
+      - light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_2
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_11_0
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_11_1
+      - media_player.living_room
+      - sensor.netatmo_indoor_co2
+      - sensor.netatmo_indoor_humidity
+      - sensor.netatmo_indoor_noise
+      - sensor.netatmo_indoor_pressure
+      - sensor.netatmo_indoor_temperature
+      
       
   office:
     name: Office
@@ -274,6 +303,21 @@ group:
       - switch.greenwave_powernode_1_port_switch_2_0
       - light.office
       - light.office_desk_lamp
+
+  kitchen:
+    name: Kitchen
+    view: yes
+    entities:
+      - light.kitchen
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_6_1
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
+
+  conservatory:
+    name: Conservatory
+      view: yes
+      entities:
+        - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
+        - sensor.fibaro_system_fgms001_motion_sensor_temperature_12_1
 
   ninasroom:
     name: Ninas Room
@@ -293,13 +337,7 @@ group:
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_7_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0      
 
-  kitchen:
-    name: Kitchen
-    view: yes
-    entities:
-      - light.kitchen
-      - sensor.fibaro_system_fgms001_motion_sensor_temperature_6_1
-      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
+
 
   bathroom:
     name: Bathroom
@@ -309,8 +347,24 @@ group:
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
       - light.bathroom
 
-
-
+  outside:
+    name: Outside
+    view: yes
+    entities:
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_13_1
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
+      - sensor.netatmo_outdoor_humidity      
+      - sensor.netatmo_outdoor_temperature
+      - light.fibaro_system_fgd212_dimmer_2_level_14_0
+      
+  unit:
+    name: Unit
+    view: yes
+    entities:
+      - sensor.unit_humidity
+      - sensor.unit.temperature
+      - sensor.unit.status
+      
 # Checks for available updates
 updater:
 
