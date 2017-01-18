@@ -255,7 +255,8 @@ http:
   api_password: !secret http_api_password
   server_port: !secret http_server_port
   ssl_certificate: !secret http_ssl_certificate
-  ssl_key: !secret http_ssl_key 
+  ssl_key: !secret http_ssl_key
+  base_url: !secret http_base_url
 
 group:
   
@@ -420,8 +421,11 @@ group:
       - group.downstairsmotion
       - group.upstarsmotion
 
-
-
+tts:
+  - platform: google
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
 
 # Checks for available updates
 updater:
