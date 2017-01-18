@@ -202,6 +202,29 @@ homeassistant:
       hidden: true
     
     
+    #Netatmo
+    sensor.netatmo_indoor_co2:
+      hidden: false
+      friendly_name: Living Room CO2
+    sensor.netatmo_indoor_humidity:
+      hidden: false
+      friendly_name: Living Room Humidity
+    sensor.netatmo_indoor_noise:
+      hidden: false
+      friendly_name: Living Room Noise
+    sensor.netatmo_indoor_pressure:
+      hidden: false
+      friendly_name: Living Room Pressure
+    sensor.netatmo_indoor_temperature:
+      hidden: false
+      friendly_name: Living Room Net Temp
+    sensor.netatmo_outdoor_humidity:
+      hidden: false
+      friendly_name: Outdoor Humidity
+    sensor.netatmo_outdoor_temperature:
+      hidden: false
+      friendly_name: Outdoor Temp
+    
     
     switch.everspring_se812_siren_switch_10_0:     
       hidden: false  
