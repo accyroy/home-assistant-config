@@ -1,0 +1,9 @@
+alias: 'Bathroom Light On'
+hide_entity: True
+trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
+    state: 'on'
+action:
+  - service: light.turn_on
+    entity_id: light.bathroom
