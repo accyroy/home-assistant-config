@@ -262,21 +262,21 @@ group:
   default_view:
     view: yes
     entities:
-     - group.living_room
+     - group.livingroom
      - group.office
      - group.kitchen
      - group.conservatory
      - group.outside
      - group.bathroom
-     - group.ninas_room
-     - group.roys_room
+     - group.ninasroom
+     - group.roysroom
      - group.outside
   
   downstairs:
     name: Downstairs
     view: yes
     entities:
-      - group.living_room
+      - group.livingroom
       - group.office
       - group.kitchen
       - group.conservatory
