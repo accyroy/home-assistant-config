@@ -267,14 +267,23 @@ zwave:
 scene:
   - name: Kitchen Fade On
     entities:
-      light.kitchen:
+      light.kitchen_1:
         state: on
         transition: 5
         brightness: 255
-      light.office_desk_lamp:
+      light.kitchen_2:
         state: on
         transition: 5
         brightness: 255
+      light.kitchen_3:
+        state: on
+        transition: 5
+        brightness: 255    
+      light.kitchen_4:
+        state: on
+        transition: 5
+        brightness: 255       
+     
   - name: Bathroom Middle Of Night
     entities:
       light.bathroom:
