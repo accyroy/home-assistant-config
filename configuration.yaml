@@ -256,7 +256,7 @@ http:
   server_port: !secret http_server_port
   ssl_certificate: !secret http_ssl_certificate
   ssl_key: !secret http_ssl_key
-  #base_url: !secret http_base_url
+  base_url: !secret http_base_url
 
 group:
   
