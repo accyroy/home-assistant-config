@@ -362,8 +362,8 @@ group:
     view: yes
     entities:
       - sensor.unit_humidity
-      - sensor.unit.temperature
-      - sensor.unit.status
+      - sensor.unit_temperature
+      - sensor.unit_status
       
 # Checks for available updates
 updater:
