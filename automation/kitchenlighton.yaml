@@ -7,4 +7,5 @@ trigger:
 action:
   - service: light.turn_on
     entity_id: light.kitchen
-    transition: 10
+    data:
+      transition: 10
