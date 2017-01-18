@@ -258,7 +258,20 @@ http:
   ssl_key: !secret http_ssl_key 
 
 group:
-
+  
+  default_view:
+    view: yes
+    entities:
+     - group.living_room
+     - group.office
+     - group.kitchen
+     - group.conservatory
+     - group.outside
+     - group.bathroom
+     - group.ninas_room
+     - group.roys_room
+     - group.outside
+  
   downstairs:
     name: Downstairs
     view: yes
@@ -279,7 +292,7 @@ group:
 
   livingroom:
     name: Living Room
-    view: yes
+    view: no
     entities:
       - light.fibaro_system_fgd212_dimmer_2_level_9_0
       - light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_2
@@ -295,7 +308,7 @@ group:
       
   office:
     name: Office
-    view: yes
+    view: no
     entities:
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_4_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
@@ -306,7 +319,7 @@ group:
 
   kitchen:
     name: Kitchen
-    view: yes
+    view: no
     entities:
       - light.kitchen
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_6_1
@@ -314,14 +327,14 @@ group:
 
   conservatory:
     name: Conservatory
-    view: yes
+    view: no
     entities:
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_12_1
 
   ninasroom:
     name: Ninas Room
-    view: yes
+    view: no
     entities:
       - light.ninas_room
       - media_player.ninas_room
@@ -330,7 +343,7 @@ group:
       
   roysroom:
     name: Roys Room
-    view: yes
+    view: no
     entities:
       - light.roys_room
       - media_player.roys_bedroom
@@ -341,7 +354,7 @@ group:
 
   bathroom:
     name: Bathroom
-    view: yes
+    view: no
     entities:
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_8_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
@@ -349,7 +362,7 @@ group:
 
   outside:
     name: Outside
-    view: yes
+    view: no
     entities:
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_13_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
