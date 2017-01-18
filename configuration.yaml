@@ -178,8 +178,22 @@ homeassistant:
     sensor.fibaro_system_fgd212_dimmer_2_system_14_12:
       hidden: true 
  
- 
-      
+    #Fibaro RGBW Node 15 Living Room Screen Surround
+    light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0:
+      hidden: true
+    light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_2:
+      hidden: false
+      friendly_name: Cinema Surround
+    light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_3:    
+      hidden: true
+    light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_4:
+      hidden: true
+    light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_5:
+      hidden: true
+    light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_6:
+      hidden: true
+    
+    
     switch.everspring_se812_siren_switch_10_0:     
       hidden: false  
       friendly_name: Siren
