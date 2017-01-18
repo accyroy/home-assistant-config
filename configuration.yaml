@@ -289,23 +289,23 @@ scene:
       light.bathroom_1:
         state: on
         transition: 10
-        brightness: 70
+        brightness: 50
       light.bathroom_2:
         state: on
         transition: 10
-        brightness: 70
+        brightness: 50
       light.bathroom_3:
         state: on
         transition: 10
-        brightness: 70
+        brightness: 50
       light.bathroom_4:
         state: on
         transition: 10
-        brightness: 70
+        brightness: 50
       light.bathroom_5:
         state: on
         transition: 10
-        brightness: 70
+        brightness: 50
 
   - name: Bathroom Normal
     entities:
