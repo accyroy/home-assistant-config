@@ -550,7 +550,14 @@ sensor:
     name: "Unit Humidity"
     state_topic: "unit/humidity"
     unit_of_measurement: "%"
-    
+  - platform: command_line
+    name: Occasion
+    command: "python3 /home/roy/.homeassistant/occasion.py" 
+
+
+
+
+
 binary_sensor:
   - platform: template
     sensors:
