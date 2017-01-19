@@ -5,7 +5,7 @@ trigger:
     entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
     to: 'off'
     for:
-      minutes: 2
+      minutes: 5
       seconds: 0
 action:
   - service: light.turn_off
