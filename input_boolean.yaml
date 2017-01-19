@@ -8,3 +8,8 @@ holiday_mode:
   name: Holiday Mode
   initial: off
   icon: mdi:thumb-up
+roy_waking_up:
+  name: Waking Up Roy
+  initial: off
+nina_waking_up:
+  name: Waking Up Nina
