@@ -16,8 +16,11 @@ action:
     entity_id: alarm_control_panel.alarm
   - service: notify.email
     data:
-      title: 'Alarm Activated'
-      Message: Sensor {{ trigger.to_state.attributes.friendly_name }} triggered - {{ trigger.to_state.state }}.
+      title: 'House Alarm Activated'
+      Message: 'Alarm Activated'
+      
+      
+      #Message: Sensor {{ trigger.to_state.attributes.friendly_name }} triggered - {{ trigger.to_state.state }}.
       
       
       #message: >-
