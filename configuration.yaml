@@ -674,21 +674,21 @@ scene:
         transition: 3
         brightness: 250 
 
-   - name: Roy Morning
+  - name: Roy Morning
     entities:
       light.roys_room:
         state: on
         transition: 900
         brightness: 255  
 
-   - name: Roy Middle Of The Night
+  - name: Roy Middle Of The Night
     entities:
       light.roys_room:
         state: on
         transition: 50
         brightness: 10  
 
-   - name: Roy Normal
+  - name: Roy Normal
     entities:
       light.roys_room:
         state: on
