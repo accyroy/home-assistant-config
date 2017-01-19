@@ -1,0 +1,17 @@
+alias: 'Roys Light Wake Up'
+hide_entity: True
+trigger:
+  - platform: time
+    after: '06:15:00'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: sensor.occasion
+      state: 'work_morning'
+    - condition: state
+      entity_id: input_boolean.holiday_mode
+      state: 'off'
+action:
+  - service: scene.turn_on
+    entity_id: scene.roy_morning
