@@ -7,6 +7,10 @@ trigger:
     for:
       minutes: 5
       seconds: 0
+condition:
+  condition: state
+  entity_id: input_boolean.roy_waking_up
+  state: 'off'
 action:
   - service: light.turn_off
     entity_id: light.roys_room
