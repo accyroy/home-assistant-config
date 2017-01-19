@@ -331,7 +331,6 @@ group:
       - alarm_control_panel.alarm
       - group.downstairsmotion
       - group.upstairsmotion
-      - group.lighting
 
 
   downstairs:
