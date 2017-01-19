@@ -1,0 +1,19 @@
+
+alias: 'Upstairs Landing Light On Middle Of Night'
+hide_entity: True
+trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
+    state: 'on'
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
+    state: 'on'
+condition:
+  condition: time
+  after: '17:00:00'
+  before: '09:00:00' 
+action:
+  - service: light.turn_on
+    data:
+      entity_id: light.fibaro_system_fgd212_dimmer_2_level_17_0
+      brightness: 75
