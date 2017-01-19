@@ -596,15 +596,15 @@ scene:
         brightness: 255
       light.kitchen_2:
         state: on
-        transition: 5
+        transition: 1
         brightness: 255
       light.kitchen_3:
         state: on
-        transition: 3
+        transition: 1
         brightness: 255    
       light.kitchen_4:
         state: on
-        transition: 2
+        transition: 1
         brightness: 255       
      
   - name: Bathroom Middle Of Night
@@ -638,21 +638,62 @@ scene:
         brightness: 255
       light.bathroom_2:
         state: on
-        transition: 2
+        transition: 1
         brightness: 255
       light.bathroom_3:
         state: on
-        transition: 3
+        transition: 1
         brightness: 255
       light.bathroom_4:
         state: on
-        transition: 4
+        transition: 1
         brightness: 255
       light.bathroom_5:
         state: on
-        transition: 5
+        transition: 1
         brightness: 255
 
+  - name: Nina Morning
+    entities:
+      light.ninas_room:
+        state: on
+        transition: 900
+        brightness: 255
+
+  - name: Nina Middle Of The Night
+    entities:
+      light.ninas_room:
+        state: on
+        transition: 10
+        brightness: 50       
+
+  - name: Nina Normal
+    entities:
+      light.ninas_room:
+        state: on
+        transition: 3
+        brightness: 250 
+
+   - name: Roy Morning
+    entities:
+      light.roys_room:
+        state: on
+        transition: 900
+        brightness: 255  
+
+   - name: Roy Middle Of The Night
+    entities:
+      light.roys_room:
+        state: on
+        transition: 50
+        brightness: 10  
+
+   - name: Roy Normal
+    entities:
+      light.roys_room:
+        state: on
+        transition: 3
+        brightness: 250
 
 
 mqtt:
