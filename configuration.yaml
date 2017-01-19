@@ -408,6 +408,7 @@ group:
 #      - media_player.ninas_room
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_5_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0
+      - input_boolean.holiday_mode
       
       
   roysroom:
