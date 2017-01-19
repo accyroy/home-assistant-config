@@ -1,0 +1,17 @@
+alias: 'Ninass Light Wake Up'
+hide_entity: True
+trigger:
+  - platform: time
+    after: '06:45:00'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: sensor.occasion
+      state: 'work_morning'
+    - condition: state
+      entity_id: input_boolean.holiday_mode
+      state: 'off'
+action:
+  - service: scene.turn_on
+    entity_id: scene.nina_morning
