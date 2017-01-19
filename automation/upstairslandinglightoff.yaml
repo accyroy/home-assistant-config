@@ -1,0 +1,12 @@
+alias: 'Upstairs Light Off'
+hide_entity: True
+trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
+    to: 'off'
+    for:
+      minutes: 1
+      seconds: 0
+action:
+  - service: light.turn_off
+    entity_id: light.fibaro_system_fgd212_dimmer_2_level_17_0
