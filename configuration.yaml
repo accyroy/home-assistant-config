@@ -664,8 +664,8 @@ scene:
     entities:
       light.ninas_room:
         state: on
-        transition: 10
-        brightness: 50       
+        transition: 1
+        brightness: 10       
 
   - name: Nina Normal
     entities:
@@ -685,7 +685,7 @@ scene:
     entities:
       light.roys_room:
         state: on
-        transition: 50
+        transition: 1
         brightness: 10  
 
   - name: Roy Normal
