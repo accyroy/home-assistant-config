@@ -114,6 +114,19 @@ homeassistant:
     sensor.fibaro_system_fgms001_motion_sensor_temperature_13_1:
       hidden: false      
       friendly_name: Front Drive Temp
+      
+    #Fibaro Motion Node 16 Upstairs Hall
+    binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0:
+      hidden: false
+      friendly_name: Upstairs Hallway
+      sensor_class: motion
+    sensor.fibaro_system_fgms001_motion_sensor_general_16_0:
+      hidden: true    
+    sensor.fibaro_system_fgms001_motion_sensor_luminance_16_3:
+      hidden: true
+    sensor.fibaro_system_fgms001_motion_sensor_temperature_16_1:
+      hidden: false      
+      friendly_name: Upstairs Hallway Temp
 
  
     #Fibaro Dimmer Node 9 Living Room Main Lights
@@ -271,6 +284,7 @@ group:
      - group.bathroom
      - group.ninasroom
      - group.roysroom
+     - group.upstairshall
      - group.outside
 
   alarm:
@@ -300,6 +314,7 @@ group:
       - group.bathroom
       - group.ninasroom
       - group.roysroom
+      - group.upstairshall
 
   livingroom:
     name: Living Room
@@ -371,6 +386,17 @@ group:
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
       - light.bathroom
 
+  upstairshall:
+    name: Upstairs Hall
+    view: no
+    entities:
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_16_1
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
+      #- light.bathroom
+
+
+
+
   outside:
     name: Outside
     view: no
@@ -414,7 +440,8 @@ group:
     entities:
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0
-      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0      
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0   
   housemotion:
     name: All Motion
     entities:
