@@ -160,10 +160,10 @@ homeassistant:
     sensor.fibaro_system_fgd212_dimmer_2_system_9_12:
       hidden: true
  
-    #Fibaro Dimmer Node 14 Entrance Lights
+    #Fibaro Dimmer Node 14 Downstairs Hall
     light.fibaro_system_fgd212_dimmer_2_level_14_0:
       hidden: false
-      friendly_name: Entrance Lights
+      friendly_name: Downstairs Hall
     light.fibaro_system_fgd212_dimmer_2_level_14_0_2:
       hidden: true
     light.fibaro_system_fgd212_dimmer_2_step_size_14_6:
@@ -190,7 +190,39 @@ homeassistant:
       hidden: true
     sensor.fibaro_system_fgd212_dimmer_2_system_14_12:
       hidden: true 
- 
+
+    #Fibaro Dimmer Node 17 Upstairs Hall
+    light.fibaro_system_fgd212_dimmer_2_level_17_0:
+      hidden: false
+      friendly_name: Upstairs Hall
+    light.fibaro_system_fgd212_dimmer_2_level_17_0_2:
+      hidden: true
+    light.fibaro_system_fgd212_dimmer_2_step_size_17_6:
+      hidden: true
+    light.fibaro_system_fgd212_dimmer_2_step_size_17_6_2:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_alarm_level_17_1:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_alarm_type_17_0:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_energy_17_0:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_exporting_17_32:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_heat_17_7:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_power_17_4:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_power_17_8:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_power_management_17_11:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_sourcenodeid_17_2:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_system_17_12:
+      hidden: true 
+
+
     #Fibaro RGBW Node 15 Living Room Screen Surround
     light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0:
       hidden: true
@@ -305,7 +337,9 @@ group:
       - group.office
       - group.kitchen
       - group.conservatory
+      - group.downstairshall
       - group.outside
+      
       
   upstairs:
     name: Upstairs
@@ -392,10 +426,13 @@ group:
     entities:
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_16_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
-      #- light.bathroom
+      - light.fibaro_system_fgd212_dimmer_2_level_17_0
 
-
-
+  downstairshall:
+    name: Downstairs Hall
+    view: no
+    entities:
+      - light.fibaro_system_fgd212_dimmer_2_level_14_0
 
   outside:
     name: Outside
@@ -405,7 +442,7 @@ group:
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
       - sensor.netatmo_outdoor_humidity      
       - sensor.netatmo_outdoor_temperature
-      - light.fibaro_system_fgd212_dimmer_2_level_14_0
+      
       
   unit:
     name: Unit
@@ -426,6 +463,8 @@ group:
       - light.ninas_room
       - light.roys_room
       - light.office
+      - light.fibaro_system_fgd212_dimmer_2_level_14_0
+      - light.fibaro_system_fgd212_dimmer_2_level_17_0
 
 
   downstairsmotion:
