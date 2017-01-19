@@ -1,0 +1,10 @@
+arm_alarm:
+  name: Arm The Alarm
+  initial: off
+no_motion:
+  name: No Motion 1 Hour
+  initial: off
+holiday_mode:
+  name: Holiday Mode
+  initial: off
+  icon: mdi:thumb-up
