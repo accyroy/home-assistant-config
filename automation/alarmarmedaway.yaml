@@ -1,0 +1,9 @@
+alias: 'Alarm Armed Away'
+hide_entity: True
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.alarm
+    to: 'armed_away'
+action:
+  - service: homeassistant.turnoff
+    entity_id: group.lighting
