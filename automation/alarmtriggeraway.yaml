@@ -17,4 +17,7 @@ action:
   - service: notify.email
     data:
       title: 'Alarm Activated'
-      message: 'Alarm activated'
+      message: >-
+        {%- for state in states.sensor if state.entity_id == trigger.entity_id -%}
+          {{ state.attributes.friendly_name }} Triggered The Alarm.
+        {%- endfor -%}
