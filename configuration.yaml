@@ -558,7 +558,7 @@ sensor:
     name: Occasion
     command: "python3 /home/roy/.homeassistant/occasion.py" 
   - platform: xbox_live
-    api_key: 	495dde1dd513e5e82ad12a10bd556c801a000dfe
+    api_key: 495dde1dd513e5e82ad12a10bd556c801a000dfe
     xuid:
       - 2533274794698087
 
