@@ -287,6 +287,9 @@ homeassistant:
     switch.greenwave_powernode_1_port_switch_2_0:
       hidden: false
       friendly_name: Clock Monitor
+      
+    sensor.darthchickens:
+      friendly_name: Xbox One
     
     
 # Show links to resources in log and frontend
@@ -368,6 +371,7 @@ group:
       - sensor.netatmo_indoor_co2
       - sensor.netatmo_indoor_noise
       - sensor.netatmo_indoor_pressure
+      - sensor.darthchickens
       
       
       
