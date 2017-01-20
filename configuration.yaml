@@ -372,6 +372,7 @@ group:
       - sensor.netatmo_indoor_noise
       - sensor.netatmo_indoor_pressure
       - sensor.darthchickens
+      - sensor.xbox_status
       
       
       
@@ -565,8 +566,11 @@ sensor:
     api_key: 495dde1dd513e5e82ad12a10bd556c801a000dfe
     xuid:
       - 2533274794698087
-
-
+  - platform: template
+    sensors:
+      xbox_status:
+        value_template: '{% if is_state("sensor.darthchickens", "Offline") %}Offline{% else %}{{ states.sensor.darthchickens.attributes["XboxOne Full"] }}{% endif %}'
+        friendly_name: Xbox Status
 
 
 binary_sensor:
