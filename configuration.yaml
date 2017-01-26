@@ -722,6 +722,13 @@ scene:
         brightness: 250
 
 
+  - name: Outside Front Normal
+    entities:
+      light.front_drive:
+        state: on
+        transition: 3
+        brightness: 250
+
 mqtt:
   broker: !secret mqtt_broker
   port: !secret mqtt_port
