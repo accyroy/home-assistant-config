@@ -390,12 +390,20 @@ group:
     view: no
     entities:
       - light.office
+      - group.office_spots
+      - light.desk_lamp
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_4_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
       - switch.greenwave_powernode_1_port_switch_2_0
       - sensor.greenwave_powernode_1_port_power_2_8
       
-      
+  office_spots:
+    name: Office Spots
+    view: no
+    entities:
+      - light.office_spot_clock
+      - light.office_spot_wall
+      - light.office_spot_desk
 
   kitchen:
     name: Kitchen
