@@ -1,0 +1,16 @@
+alias: 'Outside Light On'
+hide_entity: True
+trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
+    state: 'on'
+condition:
+  condition: state
+  entity_id: sun.sun
+  state: 'below_horizon'
+  #condition: time
+  #after: '07:00:00'
+  #before: '22:00:00' 
+action:
+  - service: scene.turn_on
+    entity_id: scene.outside_front_normal
