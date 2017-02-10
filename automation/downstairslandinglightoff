@@ -5,7 +5,7 @@ trigger:
     entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor_18_0
     to: 'off'
     for:
-      minutes: 1
+      minutes: 2
       seconds: 0
 action:
   - service: light.turn_off
