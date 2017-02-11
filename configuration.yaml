@@ -270,6 +270,13 @@ homeassistant:
     light.ninas_room:
       emulated_hue: true
       emulated_hue_name: "white room light"
+      
+    script.nina_energize:
+      emulated_hue: true
+      emulated_hue_name: "white room energise"
+    script.nina_nightlight:
+      emulated_hue: true
+      emulated_hue_name: "white room nightlight"
     
     light.roys_room_main_lamp:
       emulated_hue: true
@@ -357,6 +364,22 @@ http:
   ssl_certificate: !secret http_ssl_certificate
   ssl_key: !secret http_ssl_key
   base_url: !secret http_base_url
+
+
+script:
+  nina_energize:
+    sequence:
+      - service: light.hue_activate_scene
+        data:
+          group_name: "Ninas Room"
+          scene_name: "Energize"
+
+  nina_nightlight:
+    sequence:
+      - service: light.hue_activate_scene
+        data:
+          group_name: "Ninas Room"
+          scene_name: "Nightlight"
 
 group:
   
