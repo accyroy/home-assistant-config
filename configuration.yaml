@@ -279,6 +279,10 @@ homeassistant:
       emulated_hue: true
       emulated_hue_name: "office light"
     
+    group.frontroomlights:
+      emulated_hue: true
+      emulated_hue_name: "front room lights"
+    
     light.desk_lamp:
       emulated_hue: true
       emulated_hue_name: "desk lamp"
@@ -419,7 +423,11 @@ group:
       - sensor.xbox_status
       - climate.house
       
-      
+  frontroomlights:
+    name: Front Room Lights
+    view: no
+    entities:
+      - light.fibaro_system_fgd212_dimmer_2_level_9_0
       
   office:
     name: Office
