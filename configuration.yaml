@@ -134,7 +134,7 @@ homeassistant:
       hidden: false
       friendly_name: Living Room Lights
       emulated_hue: true
-      emulated_hue_name: "living room light"
+      emulated_hue_name: "living room lights"
     light.fibaro_system_fgd212_dimmer_2_level_9_0_2:
       hidden: true
     light.fibaro_system_fgd212_dimmer_2_step_size_9_6:
@@ -264,9 +264,25 @@ homeassistant:
       friendly_name: Downstairs Hall Temperature
     
     
-    light.office:
+
+      
+      
+    light.ninas_room:
+      emulated_hue: true
+      emulated_hue_name: "white room light"
+    
+    light.roys_room_main_lamp:
+      emulated_hue: true
+      emulated_hue_name: "bedroom light"
+      
+    group.office_spots:
       emulated_hue: true
       emulated_hue_name: "office light"
+    
+    light.desk_lamp:
+      emulated_hue: true
+      emulated_hue_name: "desk lamp"
+      
     #Netatmo
     sensor.netatmo_indoor_co2:
       hidden: false
