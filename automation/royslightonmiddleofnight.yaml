@@ -1,13 +1,13 @@
-alias: 'Roys Light On Middle Of Night'
-hide_entity: True
-trigger:
-  - platform: state
-    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
-    state: 'on'
-condition:
-  condition: time
-  after: '22:00:01'
-  before: '06:59:59' 
-action:
-  - service: scene.turn_on
-    entity_id: scene.roy_middle_of_the_night
+#alias: 'Roys Light On Middle Of Night'
+#hide_entity: True
+#trigger:
+#  - platform: state
+#    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
+#    state: 'on'
+#condition:
+#  condition: time
+#  after: '22:00:01'
+#  before: '06:59:59' 
+#action:
+#  - service: scene.turn_on
+#    entity_id: scene.roy_middle_of_the_night
