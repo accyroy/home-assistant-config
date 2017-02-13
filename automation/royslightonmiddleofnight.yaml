@@ -8,6 +8,6 @@ condition:
   condition: time
   after: '22:00:01'
   before: '06:59:59' 
-action:
-  - service: scene.turn_on
-    entity_id: scene.roy_middle_of_the_night
+#action:
+#  - service: scene.turn_on
+#    entity_id: scene.roy_middle_of_the_night
