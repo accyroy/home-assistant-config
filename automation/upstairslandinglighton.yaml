@@ -19,4 +19,4 @@ action:
   - service: light.turn_on
     data:
       entity_id: light.fibaro_system_fgd212_dimmer_2_level_17_0
-      brightness: 150
+      brightness: 50
