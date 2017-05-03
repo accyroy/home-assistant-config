@@ -318,6 +318,19 @@ homeassistant:
       friendly_name: Outdoor Temp
     
     
+    
+    switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_19_0:
+      hidden: false
+      friendly_name: Conservatory Lights
+     
+
+    switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_19_0_2:   
+      hidden: false
+      friendly_name: Security Lights
+      
+    switch.fibaro_system_fgs212_switch_3kw_switch_20_0
+      hidden: false
+      friendly_name: Underfloor Heating
     switch.everspring_se812_siren_switch_10_0:     
       hidden: false  
       friendly_name: Siren
@@ -486,6 +499,8 @@ group:
     entities:
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_12_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
+      - switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_19_0
+      - switch.fibaro_system_fgs212_switch_3kw_switch_20_0
       
 
   ninasroom:
@@ -549,7 +564,8 @@ group:
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_13_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
       - sensor.netatmo_outdoor_temperature
-      - sensor.netatmo_outdoor_humidity      
+      - sensor.netatmo_outdoor_humidity
+      - switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_19_0_2
       
       
       
