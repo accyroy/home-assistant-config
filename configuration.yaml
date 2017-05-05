@@ -110,7 +110,8 @@ homeassistant:
     sensor.fibaro_system_fgms001_motion_sensor_general_13_0:
       hidden: true    
     sensor.fibaro_system_fgms001_motion_sensor_luminance_13_3:
-      hidden: true
+      hidden: false
+      friendly_name: Front Drive Lux
     sensor.fibaro_system_fgms001_motion_sensor_temperature_13_1:
       hidden: false      
       friendly_name: Front Drive Temp
@@ -127,7 +128,30 @@ homeassistant:
     sensor.fibaro_system_fgms001_motion_sensor_temperature_16_1:
       hidden: false      
       friendly_name: Upstairs Hallway Temp
+    
+    #Fibaro Motion Node 22 Car Port
+    binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_22_0:
+      hidden: false
+      friendly_name: Car Port PIR
+      sensor_class: motion
+    sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_22_3:
+      hidden: false
+      friendly_name: Car Port Lux
+    sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_22_1:
+      hidden: false      
+      friendly_name: Car Port Temp
 
+    #Fibaro Motion Node 23 Back Garden
+    binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_23_0:
+      hidden: false
+      friendly_name: Back Garden PIR
+      sensor_class: motion
+    sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_23_3:
+      hidden: false
+      friendly_name: Back Garden Lux
+    sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_23_1:
+      hidden: false      
+      friendly_name: Back Garden Temp
  
     #Fibaro Dimmer Node 9 Living Room Main Lights
     light.fibaro_system_fgd212_dimmer_2_level_9_0:
@@ -567,6 +591,13 @@ group:
       - sensor.netatmo_outdoor_temperature
       - sensor.netatmo_outdoor_humidity
       - switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_21_0_2
+      - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_22_0
+      - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_23_0
+      - sensor.fibaro_system_fgms001_motion_sensor_luminance_13_3
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_22_3
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_23_3
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_22_1
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_23_1
       
       
       
