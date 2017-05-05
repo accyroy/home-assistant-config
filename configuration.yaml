@@ -345,7 +345,7 @@ homeassistant:
     
     switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_21_0:
       hidden: false
-      friendly_name: Conservatory Lights
+      friendly_name: Broken Output Always On
      
 
     switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_21_0_2:   
@@ -354,7 +354,7 @@ homeassistant:
       
     switch.fibaro_system_fgs212_switch_3kw_switch_20_0:
       hidden: false
-      friendly_name: Underfloor Heating
+      friendly_name: Conservatory Lights
       
     switch.everspring_se812_siren_switch_10_0:     
       hidden: false  
@@ -524,7 +524,6 @@ group:
     entities:
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_12_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
-      - switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_21_0
       - switch.fibaro_system_fgs212_switch_3kw_switch_20_0
       
 
@@ -586,18 +585,19 @@ group:
     view: no
     entities:
       - light.front_drive
-      - sensor.fibaro_system_fgms001_motion_sensor_temperature_13_1
-      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
-      - sensor.netatmo_outdoor_temperature
-      - sensor.netatmo_outdoor_humidity
       - switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_21_0_2
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_13_1
       - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_22_0
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
       - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_23_0
+      - sensor.netatmo_outdoor_temperature
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_22_1
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_23_1
+      - sensor.netatmo_outdoor_humidity
       - sensor.fibaro_system_fgms001_motion_sensor_luminance_13_3
       - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_22_3
       - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_23_3
-      - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_22_1
-      - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_23_1
+
       
       
       
