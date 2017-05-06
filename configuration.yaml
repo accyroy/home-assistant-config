@@ -509,12 +509,31 @@ group:
       - light.office_spot_clock
       - light.office_spot_wall
       - light.office_spot_desk
+      
+  kitchen_spots:
+    name: Kitchen Lights
+    view: no
+    entities:
+      - light.kitchen_1
+      - light.kitchen_2
+      - light.kitchen_3
+      - light.kitchen_4
+  
+  bathroom_spots:
+    name: Bathroom Lights
+    view: no
+    entities:
+      - light.bathroom_1
+      - light.bathroom_2
+      - light.bathroom_3
+      - light.bathroom_4
+      - light.bathroom_5
 
   kitchen:
     name: Kitchen
     view: no
     entities:
-      - light.kitchen
+      - group.kitchen_spots
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_6_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
 
@@ -553,7 +572,7 @@ group:
     name: Bathroom
     view: no
     entities:
-      - light.bathroom
+      - group.bathroom_spots
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_8_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
       
