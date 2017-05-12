@@ -616,9 +616,15 @@ group:
       - sensor.fibaro_system_fgms001_motion_sensor_luminance_13_3
       - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_22_3
       - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_23_3
+      - camera.frontofhouse
       - camera.backgarden
 
-      
+  cameras:
+    name: Cameras
+    view: yes
+    entities:
+      - camera.frontofhouse
+      - camera.backgarden
       
       
   unit:
