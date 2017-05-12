@@ -932,6 +932,9 @@ zone 4:
   icon: mdi:beer
 
 
+zoneminder:
+  host: 192.168.1.221
+
 # Example configuration.yaml entry
 alexa:
   intents:
