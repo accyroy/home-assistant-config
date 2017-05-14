@@ -16,7 +16,7 @@ homeassistant:
     binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0:
       hidden: false
       friendly_name: Office PIR
-      sensor_class: motion
+      device_class: motion
     sensor.fibaro_system_fgms001_motion_sensor_general_4_0:
       hidden: true      
     sensor.fibaro_system_fgms001_motion_sensor_luminance_4_3:
@@ -28,7 +28,7 @@ homeassistant:
     binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0:
      hidden: false
      friendly_name: Ninas Room PIR
-     sensor_class: motion
+     device_class: motion
     sensor.fibaro_system_fgms001_motion_sensor_general_5_0:
       hidden: true    
     sensor.fibaro_system_fgms001_motion_sensor_luminance_5_3:
@@ -41,7 +41,7 @@ homeassistant:
     binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0:
      hidden: false
      friendly_name: Kitchen PIR
-     sensor_class: motion
+     device_class: motion
     sensor.fibaro_system_fgms001_motion_sensor_general_6_0:
       hidden: true    
     sensor.fibaro_system_fgms001_motion_sensor_luminance_6_3:
@@ -54,7 +54,7 @@ homeassistant:
     binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0:
      hidden: false
      friendly_name: Roys Room PIR
-     sensor_class: motion
+     device_class: motion
     sensor.fibaro_system_fgms001_motion_sensor_general_7_0:
       hidden: true    
     sensor.fibaro_system_fgms001_motion_sensor_luminance_7_3:
@@ -67,7 +67,7 @@ homeassistant:
     binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0:
      hidden: false
      friendly_name: Bathroom PIR
-     sensor_class: motion
+     device_class: motion
     sensor.fibaro_system_fgms001_motion_sensor_general_8_0:
       hidden: true    
     sensor.fibaro_system_fgms001_motion_sensor_luminance_8_3:
@@ -80,7 +80,7 @@ homeassistant:
     binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_11_0:
      hidden: false
      friendly_name: Living Room PIR
-     sensor_class: motion
+     device_class: motion
     sensor.fibaro_system_fgms001_motion_sensor_general_11_0:
       hidden: true    
     sensor.fibaro_system_fgms001_motion_sensor_luminance_11_3:
@@ -93,7 +93,7 @@ homeassistant:
     binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0:
      hidden: false
      friendly_name: Conservatory PIR
-     sensor_class: motion
+     device_class: motion
     sensor.fibaro_system_fgms001_motion_sensor_general_12_0:
       hidden: true    
     sensor.fibaro_system_fgms001_motion_sensor_luminance_12_3:
@@ -106,7 +106,7 @@ homeassistant:
     binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0:
      hidden: false
      friendly_name: Front Drive PIR
-     sensor_class: motion
+     device_class: motion
     sensor.fibaro_system_fgms001_motion_sensor_general_13_0:
       hidden: true    
     sensor.fibaro_system_fgms001_motion_sensor_luminance_13_3:
@@ -120,7 +120,7 @@ homeassistant:
     binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0:
       hidden: false
       friendly_name: Upstairs Hallway
-      sensor_class: motion
+      device_class: motion
     sensor.fibaro_system_fgms001_motion_sensor_general_16_0:
       hidden: true    
     sensor.fibaro_system_fgms001_motion_sensor_luminance_16_3:
@@ -133,7 +133,7 @@ homeassistant:
     binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_22_0:
       hidden: false
       friendly_name: Car Port PIR
-      sensor_class: motion
+      device_class: motion
     sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_22_3:
       hidden: false
       friendly_name: Car Port Lux
@@ -145,7 +145,7 @@ homeassistant:
     binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_23_0:
       hidden: false
       friendly_name: Back Garden PIR
-      sensor_class: motion
+      device_class: motion
     sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_23_3:
       hidden: false
       friendly_name: Back Garden Lux
