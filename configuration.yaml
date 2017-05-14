@@ -898,32 +898,7 @@ device_tracker:
   - platform: owntracks
     max_gps_accuracy: 200
 
-zone:
-  name: School
-  latitude: !secret zone_lat
-  longitude: !secret zone_lon
-  radius: 200
-  icon: mdi:school
-zone 2:
-  name: Unit
-  latitude: !secret zone2_lat
-  longitude: !secret zone2_lon
-  radius: 100
-  icon: mdi:factory
-zone 3:
-  name: Home
-  latitude: !secret zone3_lat
-  longitude: !secret zone3_lon
-  radius: 100
-  icon: mdi:home-variant
- 
-zone 4:
-  name: Castle
-  latitude: !secret zone4_lat
-  longitude: !secret zone4_lon
-  radius: 75
-  icon: mdi:beer
-
+zone: !include_dir_list zone
 
 zoneminder:
   host: 192.168.1.221
