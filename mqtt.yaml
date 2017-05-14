@@ -1,0 +1,15 @@
+broker: !secret mqtt_broker
+port: !secret mqtt_port
+username: !secret mqtt_username
+password: !secret mqtt_password
+certificate: /etc/ssl/certs/ca-certificates.crt
+birth_message:
+  topic: 'home/status'
+  payload: 'online'
+  qos: 1
+  retain: true
+will_message:
+  topic: 'home/status'
+  payload: 'offline'
+  qos: 1
+  retain: true
