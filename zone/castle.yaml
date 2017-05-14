@@ -1,0 +1,5 @@
+  name: Castle
+  latitude: !secret zone4_lat
+  longitude: !secret zone4_lon
+  radius: 75
+  icon: mdi:beer
