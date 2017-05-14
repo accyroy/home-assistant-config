@@ -1,0 +1,5 @@
+name: Unit
+latitude: !secret zone2_lat
+longitude: !secret zone2_lon
+radius: 100
+icon: mdi:factory
