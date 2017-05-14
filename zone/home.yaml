@@ -1,0 +1,5 @@
+name: Home
+latitude: !secret zone3_lat
+longitude: !secret zone3_lon
+radius: 100
+icon: mdi:home-variant
