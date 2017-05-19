@@ -1,0 +1,15 @@
+entities:
+- name: Router
+  url: !secret weblink_router
+
+- name: Wi-Fi Controller
+  url: !secret weblink_wifi_controller
+
+- name: ZoneMinder
+  url: !secret weblink_cctv1
+
+- name: Ignition Server
+  url: !secret weblink_ignition
+
+- name: ESXI
+  url: !secret weblink_esxi
