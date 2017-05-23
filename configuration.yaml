@@ -291,7 +291,7 @@ homeassistant:
 
       
       
-    light.ninas_room:
+    light.ninas_room_main_lamp:
       emulated_hue: true
       emulated_hue_name: "white room light"
       
@@ -552,7 +552,7 @@ group:
     name: Ninas Room
     view: no
     entities:
-      - light.ninas_room
+      - light.ninas_room_main_lamp
 #      - media_player.ninas_room
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_5_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0
@@ -563,7 +563,7 @@ group:
     name: Roys Room
     view: no
     entities:
-      - light.roys_room
+      - light.roys_room_main_lamp
 #      - media_player.roys_bedroom
       - sensor.fibaro_system_fgms001_motion_sensor_temperature_7_1
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0      
@@ -647,8 +647,8 @@ group:
       - light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_2
       - light.kitchen
       - light.living_room
-      - light.ninas_room
-      - light.roys_room
+      - light.ninas_room_main_lamp
+      - light.roys_room_main_lamp
       - light.office
       - light.fibaro_system_fgd212_dimmer_2_level_14_0
       - light.fibaro_system_fgd212_dimmer_2_level_17_0
