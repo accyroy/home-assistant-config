@@ -152,6 +152,19 @@ homeassistant:
     sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_23_1:
       hidden: false      
       friendly_name: Back Garden Temp
+      
+      
+    #Fibaro Motion Node 24 Shed
+    binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_24_0:
+      hidden: false
+      friendly_name: Shed PIR
+      device_class: motion
+    sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_24_3:
+      hidden: false
+      friendly_name: Shed Lux
+    sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_24_1:
+      hidden: false      
+      friendly_name: Shed Temp
  
     #Fibaro Dimmer Node 9 Living Room Main Lights
     light.fibaro_system_fgd212_dimmer_2_level_9_0:
@@ -611,13 +624,16 @@ group:
       - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_22_0
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
       - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_23_0
+      - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_24_0
       - sensor.netatmo_outdoor_temperature
       - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_22_1
       - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_23_1
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_24_1
       - sensor.netatmo_outdoor_humidity
       - sensor.fibaro_system_fgms001_motion_sensor_luminance_13_3
       - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_22_3
       - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_23_3
+      - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_24_3
       - camera.frontofhouse
       - camera.backgarden
 
