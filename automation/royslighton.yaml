@@ -4,7 +4,7 @@ initial_state: false
 trigger:
   - platform: state
     entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
-    state: 'on'
+    to: 'on'
 condition:
   condition: time
   after: '07:00:00'
