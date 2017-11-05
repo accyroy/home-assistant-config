@@ -899,7 +899,7 @@ scene:
 
   - name: Outside Front Normal
     entities:
-      light.front_drive:
+      light.front_drive_lamp:
         state: on
         transition: 3
         brightness: 250
