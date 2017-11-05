@@ -1,1 +1,246 @@
+default_view:
+  view: yes
+  entities:
+   - group.livingroom
+   - group.office
+   - group.kitchen
+   - group.conservatory
+   - group.outside
+   - group.bathroom
+   - group.ninasroom
+   - group.roysroom
+   - group.upstairshall
+   - group.downstairshall
+   - group.outside
 
+alarm:
+  name: Alarm
+  view: yes
+  entities:
+    - alarm_control_panel.alarm
+    - group.downstairsmotion
+    - group.upstairsmotion
+
+downstairs:
+  name: Downstairs
+  view: yes
+  entities:
+    - group.livingroom
+    - group.office
+    - group.kitchen
+    - group.conservatory
+    - group.downstairshall
+    - group.outside
+  
+upstairs:
+  name: Upstairs
+  view: yes
+  entities:
+    - group.bathroom
+    - group.ninasroom
+    - group.roysroom
+    - group.upstairshall
+
+livingroom:
+  name: Living Room
+  view: no
+  entities:
+    - light.fibaro_system_fgd212_dimmer_2_level_9_0
+    - light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_2
+    - sensor.fibaro_system_fgms001_motion_sensor_temperature_11_1
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_11_0
+#    - media_player.living_room
+    - sensor.netatmo_indoor_temperature
+    - sensor.netatmo_indoor_humidity
+    - sensor.netatmo_indoor_co2
+    - sensor.netatmo_indoor_noise
+    - sensor.netatmo_indoor_pressure
+    - sensor.darthchickens
+    - sensor.xbox_status
+    - climate.house
+      
+frontroomlights:
+  name: Front Room Lights
+  view: no
+  entities:
+    - light.fibaro_system_fgd212_dimmer_2_level_9_0
+     
+office:
+  name: Office
+  view: no
+  entities:
+    - light.office
+    - group.office_spots
+    - light.desk_lamp
+    - sensor.fibaro_system_fgms001_motion_sensor_temperature_4_1
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
+    - switch.greenwave_powernode_1_port_switch_2_0
+    - sensor.greenwave_powernode_1_port_power_2_8
+    - camera.office
+    
+office_spots:
+  name: Office Spots
+  view: no
+  entities:
+    - light.office_spot_clock
+    - light.office_spot_wall
+    - light.office_spot_desk
+    
+kitchen_spots:
+  name: Kitchen Lights
+  view: no
+  entities:
+    - light.kitchen_1
+    - light.kitchen_2
+    - light.kitchen_3
+    - light.kitchen_4
+
+bathroom_spots:
+  name: Bathroom Lights
+  view: no
+  entities:
+    - light.bathroom_1
+    - light.bathroom_2
+    - light.bathroom_3
+    - light.bathroom_4
+    - light.bathroom_5
+
+kitchen:
+  name: Kitchen
+  view: no
+  entities:
+    - group.kitchen_spots
+    - sensor.fibaro_system_fgms001_motion_sensor_temperature_6_1
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
+
+conservatory:
+  name: Conservatory
+  view: no
+  entities:
+    - sensor.fibaro_system_fgms001_motion_sensor_temperature_12_1
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
+    - switch.fibaro_system_fgs212_switch_3kw_switch_20_0
+    - camera.conservatory
+    
+ninasroom:
+  name: Ninas Room
+  view: no
+  entities:
+    - light.ninas_room_main_lamp
+#    - media_player.ninas_room
+    - sensor.fibaro_system_fgms001_motion_sensor_temperature_5_1
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0
+    - input_boolean.holiday_mode
+    
+roysroom:
+  name: Roys Room
+  view: no
+  entities:
+    - light.roys_room_main_lamp
+#    - media_player.roys_bedroom
+    - sensor.fibaro_system_fgms001_motion_sensor_temperature_7_1
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0      
+
+bathroom:
+  name: Bathroom
+  view: no
+  entities:
+    - group.bathroom_spots
+    - sensor.fibaro_system_fgms001_motion_sensor_temperature_8_1
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
+      
+upstairshall:
+  name: Upstairs Hall
+  view: no
+  entities:
+    - light.fibaro_system_fgd212_dimmer_2_level_17_0
+    - sensor.fibaro_system_fgms001_motion_sensor_temperature_16_1
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
+    
+downstairshall:
+  name: Downstairs Hall
+  view: no
+  entities:
+    - light.fibaro_system_fgd212_dimmer_2_level_14_0
+    - binary_sensor.aeotec_zw100_multisensor_6_sensor_18_0
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_18_5
+    - sensor.aeotec_zw100_multisensor_6_temperature_18_1
+     
+    
+      
+      
+outside:
+  name: Outside
+  view: no
+  entities:
+    - light.front_drive_lamp
+    - switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_21_0_2
+    - sensor.fibaro_system_fgms001_motion_sensor_temperature_13_1
+    - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_22_0
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
+    - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_23_0
+    - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_24_0
+    - sensor.netatmo_outdoor_temperature
+    - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_22_1
+    - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_23_1
+    - sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_24_1
+    - sensor.netatmo_outdoor_humidity
+    - sensor.fibaro_system_fgms001_motion_sensor_luminance_13_3
+    - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_22_3
+    - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_23_3
+    - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_24_3
+    - camera.front_drive
+    - camera.back_garden
+
+cameras:
+  name: Cameras
+  view: yes
+  entities:
+    - camera.office
+    - camera.conservatory
+    - camera.front_drive
+    - camera.back_garden
+    
+      
+unit:
+  name: Unit
+  view: yes
+  entities:
+    - sensor.unit_temperature
+    - sensor.unit_humidity
+    - sensor.unit_status
+
+lighting:
+  name: Lighting
+  entities:
+    - light.bathroom
+    - light.fibaro_system_fgd212_dimmer_2_level_9_0
+    - light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_2
+    - light.kitchen
+    - light.living_room
+    - light.ninas_room_main_lamp
+    - light.roys_room_main_lamp
+    - light.office
+    - light.fibaro_system_fgd212_dimmer_2_level_14_0
+    - light.fibaro_system_fgd212_dimmer_2_level_17_0
+    - light.front_drive_lamp
+
+downstairsmotion:
+  name: Downstairs Motion
+  entities:
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_11_0
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
+upstairsmotion:
+  name: Upstairs Motion
+  entities:
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
+    - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0   
+housemotion:
+  name: All Motion
+  entities:
+    - group.downstairsmotion
+    - group.upstarsmotion
