@@ -1,24 +1,12 @@
 - platform: mjpeg
   mjpeg_url: !secret fd_url
   name: Front Drive
-  username: !secret bi_user
-  password:  !secret bi_pass
-  authentication: basic
 - platform: mjpeg
   mjpeg_url: !secret bgdn_url
   name: Back Garden
-  username: !secret bi_user
-  password:  !secret bi_pass
-  authentication: basic
 - platform: mjpeg
   mjpeg_url: !secret con_url
   name: Conservatory
-  username: !secret bi_user
-  password:  !secret bi_pass
-  authentication: basic
 - platform: mjpeg
   mjpeg_url: !secret office_url
   name: Office
-  username: !secret bi_user
-  password:  !secret bi_pass
-  authentication: basic
