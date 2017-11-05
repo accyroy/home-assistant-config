@@ -496,7 +496,6 @@ group:
       - sensor.darthchickens
       - sensor.xbox_status
       - climate.house
-      - camera.frontroom
       
   frontroomlights:
     name: Front Room Lights
@@ -515,6 +514,7 @@ group:
       - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
       - switch.greenwave_powernode_1_port_switch_2_0
       - sensor.greenwave_powernode_1_port_power_2_8
+      - camera.office
       
   office_spots:
     name: Office Spots
@@ -634,17 +634,17 @@ group:
       - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_22_3
       - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_23_3
       - sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_24_3
-      - camera.frontofhouse
-      - camera.backgarden
+      - camera.front_drive
+      - camera.back_garden
 
   cameras:
     name: Cameras
     view: yes
     entities:
-      - camera.frontroom
+      - camera.office
       - camera.conservatory
-      - camera.frontofhouse
-      - camera.backgarden
+      - camera.front_drive
+      - camera.back_garden
       
       
   unit:
