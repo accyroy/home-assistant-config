@@ -529,6 +529,7 @@ climate:
   
 zwave:
   usb_path: /dev/zwave
+  new_entity_ids: false
 
 
 scene:
