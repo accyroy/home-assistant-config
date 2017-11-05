@@ -2,7 +2,7 @@ alias: 'Ninass Light Wake Up'
 hide_entity: True
 trigger:
   - platform: time
-    after: '06:45:00'
+    at: '06:45:00'
 condition:
   condition: and
   conditions:
