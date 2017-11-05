@@ -49,7 +49,6 @@ livingroom:
     - light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_2
     - sensor.fibaro_system_fgms001_motion_sensor_temperature_11_1
     - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_11_0
-#    - media_player.living_room
     - sensor.netatmo_indoor_temperature
     - sensor.netatmo_indoor_humidity
     - sensor.netatmo_indoor_co2
@@ -127,7 +126,6 @@ ninasroom:
   view: no
   entities:
     - light.ninas_room_main_lamp
-#    - media_player.ninas_room
     - sensor.fibaro_system_fgms001_motion_sensor_temperature_5_1
     - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0
     - input_boolean.holiday_mode
@@ -137,7 +135,6 @@ roysroom:
   view: no
   entities:
     - light.roys_room_main_lamp
-#    - media_player.roys_bedroom
     - sensor.fibaro_system_fgms001_motion_sensor_temperature_7_1
     - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0      
 
