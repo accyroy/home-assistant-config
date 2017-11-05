@@ -3,10 +3,10 @@ hide_entity: True
 trigger:
   - platform: state
     entity_id: group.downstairsmotion
-    state: 'on'
+    to: 'on'
   - platform: state
     entity_id: group.upstairsmotion
-    state: 'on'        
+    to: 'on'        
 condition:
   condition: state
   entity_id: alarm_control_panel.alarm
