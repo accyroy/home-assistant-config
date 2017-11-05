@@ -3,10 +3,10 @@ hide_entity: True
 trigger:
   - platform: state
     entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_22_0
-    state: 'on'
+    to: 'on'
   - platform: state
     entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_23_0
-    state: 'on'
+    to: 'on'
 condition:
   condition: state
   entity_id: sun.sun
