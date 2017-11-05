@@ -920,10 +920,13 @@ device_tracker:
 
 zone: !include_dir_list zone
 
-zoneminder:
-  host: 192.168.1.221
 camera:
-  - platform: zoneminder
+  - platform: mjpeg
+    mjpeg_url: !secret fd_url
+    name: Front Drive
+    username: !secret bi_user
+    password:  !secret bi_pass
+    authentication: basic
 
 # Example configuration.yaml entry
 alexa:
