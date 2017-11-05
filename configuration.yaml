@@ -434,6 +434,8 @@ script:
 
 group: !include groups.yaml
 
+config:
+
 tts:
   - platform: google
     cache: true
