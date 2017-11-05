@@ -141,7 +141,8 @@ binary_sensor:
         friendly_name: "Unit Status"
         
         
-automation: !include_dir_list automation 
+# automation: !include_dir_list automation 
+automation: !include automations.yaml
 
 ios:
 
