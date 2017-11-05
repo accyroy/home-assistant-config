@@ -1,1 +1,446 @@
+- id: alarm_armed_away
+  alias: 'Alarm Armed Away'
+  hide_entity: True
+  trigger:
+   - platform: state
+     entity_id: alarm_control_panel.alarm
+     to: 'armed_away'
+  action:
+  - service: homeassistant.turnoff
+    entity_id: group.lighting
+      
+- id: alarm_disarmed
+  alias: 'Alarm Disarmed'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.alarm
+    to: 'disarmed'
+  action:
+  - service: switch.turn_off
+    entity_id: switch.everspring_se812_siren_switch_10_0
+      
+- id: alarm_triggered_away
+  alias: 'Trigger Alarm Away'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: group.downstairsmotion
+    to: 'on'
+  - platform: state
+    entity_id: group.upstairsmotion
+    to: 'on'        
+  condition:
+    condition: state
+    entity_id: alarm_control_panel.alarm
+    state: armed_away
+  action:
+  - service: alarm_control_panel.alarm_trigger
+    entity_id: alarm_control_panel.alarm
+  - service: notify.email
+    data:
+      title: 'House Alarm Activated'
+      Message: 'Alarm Activated'
+        
+- id: alarm_triggered
+  alias: 'Alarm Triggered'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.alarm
+    to: 'triggered'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.everspring_se812_siren_switch_10_0
+    
+- id: alarm_triggered_home
+  alias: 'Trigger Alarm Home'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: group.downstairsmotion
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: alarm_control_panel.alarm
+    state: armed_home
+  action:
+  - service: alarm_control_panel.alarm_trigger
+    entity_id: alarm_control_panel.alarm
+  - service: notify.email
+    data:
+      title: 'Alarm Activated'
+      message: 'Alarm activated'
+     
+- id: bathroom_light_off
+  alias: 'Bathroom Light Off'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
+    to: 'off'
+    for:
+      minutes: 6
+      seconds: 0
+  action:
+  - service: homeassistant.turn_off
+    entity_id: group.bathroom_spots
+  
+- id: bathroom_light_on
+  alias: 'Bathroom Light On'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
+    to: 'on'
+  condition:
+    condition: time
+    after: '06:00:00'
+    before: '23:59:59' 
+  action:
+  - service: scene.turn_on
+    entity_id: scene.bathroom_normal
+    
+- id: bathroom_light_on_mon
+  alias: 'Bathroom Light On Middle Of Night'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
+    to: 'on'
 
+  condition:
+    condition: time
+    after: '00:00:00'
+    before: '05:59:59' 
+  action:
+  - service: scene.turn_on
+    entity_id: scene.bathroom_middle_of_night
+    
+- id: conservatory_lights_off
+  alias: 'Conservatory Lights Off'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
+    to: 'off'
+    for:
+      minutes: 5
+      seconds: 0
+  action:
+  - service: switch.turn_off
+    entity_id: switch.fibaro_system_fgs212_switch_3kw_switch_20_0
+   
+- id: conservatory_lights_on
+  alias: 'Conservatory Light On When Dark'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: sun.sun
+    state: 'below_horizon'
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.fibaro_system_fgs212_switch_3kw_switch_20_0
+      
+- id: down_lights_off
+  alias: 'Downstairs Light Off'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor_18_0
+    to: 'off'
+    for:
+      minutes: 2
+      seconds: 0
+  action:
+  - service: light.turn_off
+    entity_id: light.fibaro_system_fgd212_dimmer_2_level_14_0
+    
+- id: down_lights_on
+  alias: 'Downstairs Landing Light On'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor_18_0
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: sun.sun
+    state: 'below_horizon'
+  action:
+  - service: light.turn_on
+    data:
+      entity_id: light.fibaro_system_fgd212_dimmer_2_level_14_0
+      brightness: 250
+      
+- id: kitchen_lights_off
+  alias: 'Kitchen Light Off'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
+    to: 'off'
+    for:
+      minutes: 5
+      seconds: 0
+  action:
+  - service: homeassistant.turn_off
+    entity_id: group.kitchen_spots
+   
+- id: kitchen_lights_on
+  alias: 'Kitchen Light On'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
+    to: 'on'
+  action:
+  - service: scene.turn_on
+    entity_id: scene.kitchen_fade_on
+  
+- id: ninas_light_wake
+  alias: 'Ninass Light Wake Up'
+  hide_entity: True
+  trigger:
+  - platform: time
+    at: '06:45:00'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: sensor.occasion
+      state: 'work_morning'
+    - condition: state
+      entity_id: input_boolean.holiday_mode
+      state: 'off'
+  action:
+  - service: scene.turn_on
+    entity_id: scene.nina_morning
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.nina_waking_up
+    
+- id: clock_off
+  alias: 'Switch Clock Off'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
+    to: 'off'
+    for:
+      minutes: 30
+      seconds: 30
+  action:
+  - service: switch.turn_off
+    entity_id: switch.greenwave_powernode_1_port_switch_2_0
+    
+- id: clock_on
+  alias: 'Switch Clock On'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
+    to: 'on'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.greenwave_powernode_1_port_switch_2_0
+    
+- id: outside_lights_off
+  alias: 'Outside Light Off'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
+    to: 'off'
+    for:
+      minutes: 2
+      seconds: 0
+  action:
+  - service: light.turn_off
+    entity_id: light.front_drive_lamp
+    
+- id: outside_lights_on
+  alias: 'Outside Light On'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: sun.sun
+    state: 'below_horizon'
+  action:
+  - service: scene.turn_on
+    entity_id: scene.outside_front_normal
+    
+- id: roys_light_off
+  alias: 'Roys Light Off'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
+    to: 'off'
+    for:
+      minutes: 10
+      seconds: 0
+  condition:
+    condition: state
+    entity_id: input_boolean.roy_waking_up
+    state: 'off'
+  action:
+  - service: light.turn_off
+    entity_id: light.roys_room
+    
+- id: roys_light_on
+  alias: 'Roys Light On'
+  hide_entity: True
+  initial_state: false
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
+    to: 'on'
+  condition:
+    condition: time
+    after: '07:00:00'
+    before: '22:00:00' 
+  action:
+  - service: scene.turn_on
+    entity_id: scene.roy_normal
+    
+- id: royslightonmiddleofnight
+  alias: 'Roys Light On Middle Of Night'
+  hide_entity: True
+  initial_state: false
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
+    to: 'on'
+  condition:
+    condition: time
+    after: '22:00:01'
+    before: '06:59:59' 
+  action:
+  - service: scene.turn_on
+    entity_id: scene.roy_middle_of_the_night
+    
+- id: royslightwakeup
+  alias: 'Roys Light Wake Up'
+  hide_entity: True
+  trigger:
+  - platform: time
+    at: '06:30:00'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: sensor.occasion
+      state: 'work_morning'
+    - condition: state
+      entity_id: input_boolean.holiday_mode
+      state: 'off'
+  action:
+  - service: scene.turn_on
+    entity_id: scene.roy_morning
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.roy_waking_up
+    
+- id: royswokeup
+  alias: 'Roys Woke Up'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: input_boolean.roy_waking_up
+    to: 'on'
+    for:
+      minutes: 15
+      seconds: 0
+
+  action:
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.roy_waking_up
+    
+- id: securitylightsoffmotion
+  alias: 'Security Light Off'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_22_0
+    to: 'off'
+    for:
+      minutes: 5
+      seconds: 0
+  action:
+  - service: switch.turn_off
+    entity_id: switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_21_0_2
+    
+- id: securitylightsoffmotion2
+  alias: 'Security Light Off'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_23_0
+    to: 'off'
+    for:
+      minutes: 5
+      seconds: 0
+  action:
+  - service: switch.turn_off
+    entity_id: switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_21_0_2
+    
+- id: securitylightson
+  alias: 'Security Lights On'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_22_0
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_23_0
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: sun.sun
+    state: 'below_horizon'
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_21_0_2
+      
+- id: upstairslandingoff
+  alias: 'Upstairs Light Off'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
+    to: 'off'
+    for:
+      minutes: 1
+      seconds: 0
+  action:
+  - service: light.turn_off
+    entity_id: light.fibaro_system_fgd212_dimmer_2_level_17_0
+    
+- id: upstairslandingon
+  alias: 'Upstairs Landing Light On Middle Of Night'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: sun.sun
+    state: 'below_horizon'
+  action:
+  - service: light.turn_on
+    data:
+      entity_id: light.fibaro_system_fgd212_dimmer_2_level_17_0
+      brightness: 50
