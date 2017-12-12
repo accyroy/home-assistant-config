@@ -57,6 +57,7 @@ livingroom:
     - sensor.darthchickens
     - sensor.xbox_status
     - climate.house
+    - camera.front_room
       
 frontroomlights:
   name: Front Room Lights
@@ -193,6 +194,7 @@ cameras:
   name: Cameras
   view: yes
   entities:
+    - camera.front_room
     - camera.office
     - camera.conservatory
     - camera.front_drive
