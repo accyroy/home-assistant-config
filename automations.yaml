@@ -1,76 +1,95 @@
 - id: alarm_armed_away
-  alias: 'Alarm Armed Away'
-  hide_entity: True
+  alias: '[Alarm] Away Mode Armed'
   trigger:
-   - platform: state
-     entity_id: alarm_control_panel.alarm
-     to: 'armed_away'
+  - platform: state
+    entity_id: alarm_control_panel.house
+    to: 'armed_away'
   action:
+  - data:
+      message: 'Alarm Away Mode Armed'
+      target: email/accyroy@gmail.com
+    service: notify.pushbullet
+#  - data:
+#      message: 'The house alarm has been switched on in away mode. Goodbye'
+#    service: notify.example_phone_tts
   - service: homeassistant.turnoff
     entity_id: group.lighting
-      
-- id: alarm_disarmed
-  alias: 'Alarm Disarmed'
-  hide_entity: True
+
+- id: alarm_armed_home
+  alias: '[Alarm] Home Mode Armed'
   trigger:
   - platform: state
-    entity_id: alarm_control_panel.alarm
+    entity_id: alarm_control_panel.house
+    to: 'armed_home'
+  action:
+  - data:
+      message: 'Alarm Home Mode Armed'
+      target: email/accyroy@gmail.com
+    service: notify.pushbullet
+#  - data:
+#      message: 'The house alarm has been switched on in home mode. Goodnight'
+#    service: notify.example_phone_tts
+
+- id: alarm_arming_away
+  alias: '[Alarm] Away Mode Arming'
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.house
+    to: 'pending'
+  action:
+#  - data:
+#      message: 'House alarm activating, ensure all doors and windows are closed'
+#    service: notify.example_phone_tts
+
+- id: alarm_disarmed
+  alias: '[Alarm] Disarmed'
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.house
     to: 'disarmed'
   action:
+  - service: notify.pushbullet
+    data:
+      message: 'Alarm Disabled'
+      target: email/accyroy@gmail.com
   - service: switch.turn_off
     entity_id: switch.everspring_se812_siren_switch_10_0
+#  - data:
+#      message: 'The house alarm has been Deactivated'
+#    service: notify.example_phone_tts
+
       
-- id: alarm_triggered_away
-  alias: 'Trigger Alarm Away'
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: group.downstairsmotion
-    to: 'on'
-  - platform: state
-    entity_id: group.upstairsmotion
-    to: 'on'        
-  condition:
-    condition: state
-    entity_id: alarm_control_panel.alarm
-    state: armed_away
-  action:
-  - service: alarm_control_panel.alarm_trigger
-    entity_id: alarm_control_panel.alarm
-  - service: notify.email
-    data:
-      title: 'House Alarm Activated'
-      Message: 'Alarm Activated'
-        
 - id: alarm_triggered
-  alias: 'Alarm Triggered'
-  hide_entity: True
+  alias: '[Alarm] Triggered'
   trigger:
   - platform: state
-    entity_id: alarm_control_panel.alarm
+    entity_id: alarm_control_panel.house
     to: 'triggered'
   action:
   - service: switch.turn_on
     entity_id: switch.everspring_se812_siren_switch_10_0
-    
-- id: alarm_triggered_home
-  alias: 'Trigger Alarm Home'
-  hide_entity: True
+  - service: notify.pushbullet
+    data:
+      message: 'ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
+      target: email/accyroy@gmail.com
+      
+- id: alarm_warning
+  alias: '[Alarm] Warning'
   trigger:
   - platform: state
-    entity_id: group.downstairsmotion
-    to: 'on'
-  condition:
-    condition: state
-    entity_id: alarm_control_panel.alarm
-    state: armed_home
+    entity_id: alarm_control_panel.house
+    to: 'warning'
   action:
-  - service: alarm_control_panel.alarm_trigger
-    entity_id: alarm_control_panel.alarm
-  - service: notify.email
+  - service: notify.pushbullet
     data:
-      title: 'Alarm Activated'
-      message: 'Alarm activated'
+      message: 'ALARM Warning {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
+      target: email/accyroy@gmail.com
+#  - data:
+#      message: 'Hello, the house alarm has been tripped. Please deactivate'
+#    service: notify.example_phone_tts
+        
+
+
      
 - id: bathroom_light_off
   alias: 'Bathroom Light Off'
