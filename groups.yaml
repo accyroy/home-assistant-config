@@ -45,7 +45,7 @@ livingroom:
   name: Living Room
   view: no
   entities:
-    - light.fibaro_system_fgd212_dimmer_2_level_9_0
+    - light.living_room
     - light.fibaro_system_fgrgbwm441_rgbw_controller_level_15_0_2
     - sensor.fibaro_system_fgms001_motion_sensor_temperature_11_1
     - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_11_0
@@ -70,7 +70,6 @@ office:
   view: no
   entities:
     - light.office
-    - group.office_spots
     - light.desk_lamp
     - sensor.fibaro_system_fgms001_motion_sensor_temperature_4_1
     - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
