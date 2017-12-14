@@ -142,12 +142,16 @@ zwave:
 mqtt: !include mqtt.yaml
 scene: !include scenes.yaml
 
-alarm_control_panel:
-  - platform: manual
-    name: Alarm
-    code: !secret alarm_control_panel_code
-    pending_time: 10
-    trigger_time: 10
+alarm_control_panel: !include alarm.yaml
+panel_custom: !include panel_custom.yaml
+
+
+#alarm_control_panel:
+#  - platform: manual
+#    name: Alarm
+#    code: !secret alarm_control_panel_code
+#    pending_time: 10
+#    trigger_time: 10
 
 device_tracker:
   - platform: owntracks
