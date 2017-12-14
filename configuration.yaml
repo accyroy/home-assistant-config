@@ -80,6 +80,12 @@ notify:
     recipient: !secret smtp_recipient
 
 sensor:
+  - platform: darksky
+    api_key: !secret darksky_apikey
+    monitored_conditions:
+      - summary
+      - icon
+      - nearest_storm_distance
   - platform: yr
   - platform: mqtt
     name: "Unit Status"
