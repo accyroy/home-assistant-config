@@ -7,7 +7,7 @@ alarm: automation.alarm_triggered
 warning: automation.alarm_warning
 
 clock: True  #Optional - True enables a clock in the center of the status bar
-perimeter_mode: True #Optional - True enables perimeter mode, this could be known as 'Day Mode' i.e. only arm the doors whilst there is someone using all floors
+perimeter_mode: False #Optional - True enables perimeter mode, this could be known as 'Day Mode' i.e. only arm the doors whilst there is someone using all floors
 weather: True #Optional - Allows a weather summary to be displayed on the status bar. Dark Sky weather component must be enabled with the name sensor.dark_sky_summary
 
 #### COLOURS ###########  Use any HTML format
@@ -20,36 +20,39 @@ triggered_colour: 'red'
 
 ############# SENSOR GROUPS ########################
 # Sensors in this group tigger the alarm immediately
-immediate:
-  - binary_sensor.top_floor_multi_sensor_sensor
-  - binary_sensor.lounge_multi_sensor_sensor
-  - binary_sensor.toilet_window_sensor
-  - binary_sensor.back_door_sensor
-  - binary_sensor.lounge_doors_sensor
-  - binary_sensor.kitchen_window_sensor
+#immediate:
+#  - binary_sensor.top_floor_multi_sensor_sensor
+#  - binary_sensor.lounge_multi_sensor_sensor
+#  - binary_sensor.toilet_window_sensor
+#  - binary_sensor.back_door_sensor
+#  - binary_sensor.lounge_doors_sensor
+#  - binary_sensor.kitchen_window_sensor
 
 # Sensors in this group start the clock (pending_time) when tripped before the alarm is activated in 'Away' mode
 delayed:
-  - binary_sensor.kitchen_multi_sensor_sensor
-  - binary_sensor.hall_multi_sensor_sensor
-  - binary_sensor.toilet_multi_sensor_sensor
-  - binary_sensor.front_door_sensor
-  - binary_sensor.garage_door_sensor
+  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
+  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
+  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_11_0
+  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
+  - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_24_0
+  - binary_sensor.aeotec_zw100_multisensor_6_sensor_18_0
 
 # Same as notathome but hopefully the title is more self explanatory. Can still use notathome for backwards compatibility
 # Note sensors can exist in more than one group notice top_floor appears in two groups
 homemodeignore:
-  - binary_sensor.top_floor_multi_sensor_sensor
-  - binary_sensor.lounge_multi_sensor_sensor
+  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
+  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
+  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
+  
 # Use this group to automatically override the warning message on open sensors when setting 'away' mode. (I use this as I have a motion sensor at the front door)
-#override:
-#  - binary_sensor.hall_multi_sensor_sensor
+override:
+  - binary_sensor.aeotec_zw100_multisensor_6_sensor_18_0
 
 # This group is special and only effects 'perimeter mode'. If perimeter_mode is enabled then any sensor in this group will trigger the alarm immediately if arm perimeter is set. There is no delayed group for this mode (unless requested as a feature of course!)
-perimeter:
-  - binary_sensor.toilet_window_sensor
-  - binary_sensor.back_door_sensor
-  - binary_sensor.lounge_doors_sensor
-  - binary_sensor.kitchen_window_sensor
-  - binary_sensor.front_door_sensor
-  - binary_sensor.garage_door_sensor
+#perimeter:
+#  - binary_sensor.toilet_window_sensor
+#  - binary_sensor.back_door_sensor
+#  - binary_sensor.lounge_doors_sensor
+#  - binary_sensor.kitchen_window_sensor
+#  - binary_sensor.front_door_sensor
+#  - binary_sensor.garage_door_sensor
