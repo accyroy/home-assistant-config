@@ -73,6 +73,10 @@
   - data:
       title: 'Alarm Triggered'
       message: 'ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
+      data:
+        video:
+          - file: /home/roy/.homeassistant/snapshots/lv.mp4
+            caption: Living Room
     service: notify.telegram
   
       
