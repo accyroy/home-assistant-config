@@ -42,8 +42,8 @@
     service: notify.nexus7
   - data:
       message: "chime"
-        data: 
-          method: "alarm"
+      method: "alarm"
+    service: notify.nexus7
 
 - id: alarm_disarmed
   alias: '[Alarm] Disarmed'
