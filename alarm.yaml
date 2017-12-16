@@ -25,7 +25,7 @@ immediate:
   - binary_sensor.conservatory_sensor
   - binary_sensor.kitchen_sensor
   - binary_sensor.livingroom_sensor
-  - binary_sensor.ninasroom_sensor	
+  - binary_sensor.ninasroom_sensor
   - binary_sensor.office_sensor
   - binary_sensor.roysroom_sensor
   - binary_sensor.shed_sensor
