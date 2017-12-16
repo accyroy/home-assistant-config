@@ -40,10 +40,7 @@
   - data:
       message: 'House alarm activating, ensure all doors and windows are closed'
     service: notify.nexus7
-  - data:
-      message: "chime"
-      method: "alarm"
-    service: notify.nexus7
+
 
 - id: alarm_disarmed
   alias: '[Alarm] Disarmed'
@@ -285,7 +282,24 @@
   action:
   - service: light.turn_off
     entity_id: light.front_drive_lamp
-    
+
+
+- id: someoneatfrontdoor
+  alias: 'Front Door Motion'
+  hide_entity: True
+  trigger:
+  - platform: state
+    #entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_11_0
+    to: 'on'
+  action:
+  - data:
+      message: "chime"
+      data:
+        method: "alarm"
+    service: notify.nexus7
+
+
 - id: outside_lights_on
   alias: 'Outside Light On'
   hide_entity: True
