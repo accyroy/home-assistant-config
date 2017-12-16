@@ -307,7 +307,7 @@
   hide_entity: True
   trigger:
   - platform: state
-    binary_sensor.frontdrive_sensor
+    entity_id: binary_sensor.frontdrive_sensor
     to: 'on'
   action:
   - data:
