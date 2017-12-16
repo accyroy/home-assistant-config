@@ -41,7 +41,7 @@ delayed:
 homemodeignore:
   - binary_sensor.upstairshall_sensor
   - binary_sensor.roysroom_sensor
-  - binary_sensor.ninasroom_sensor	
+  - binary_sensor.ninasroom_sensor
   - binary_sensor.bathroom_sensor
   
 # Use this group to automatically override the warning message on open sensors when setting 'away' mode. (I use this as I have a motion sensor at the front door)
