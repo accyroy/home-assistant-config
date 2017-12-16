@@ -292,11 +292,11 @@
   trigger:
   - platform: state
     #entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
-    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_11_0
+    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_13_0
     to: 'on'
   action:
   - data:
-      message: "chime"
+      message: "doorbell"
       data:
         method: "alarm"
     service: notify.nexus7
