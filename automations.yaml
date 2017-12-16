@@ -6,10 +6,6 @@
     to: 'armed_away'
   action:
   - data:
-      message: 'Alarm Away Mode Armed'
-      target: email/accyroy@gmail.com
-    service: notify.pushbullet
-  - data:
       title: 'Alarm Away Mode Armed'
       message: 'Alarm Away Mode Armed'
     service: notify.telegram
@@ -26,10 +22,6 @@
     entity_id: alarm_control_panel.house
     to: 'armed_home'
   action:
-  - data:
-      message: 'Alarm Home Mode Armed'
-      target: email/accyroy@gmail.com
-    service: notify.pushbullet
   - data:
       title: 'Alarm Home Mode Armed'
       message: 'Alarm Home Mode Armed'
@@ -56,10 +48,6 @@
     entity_id: alarm_control_panel.house
     to: 'disarmed'
   action:
-  - service: notify.pushbullet
-    data:
-      message: 'Alarm Disabled'
-      target: email/accyroy@gmail.com
   - data:
       title: 'Alarm Disabled'
       message: 'Alarm Disabled'
@@ -80,10 +68,6 @@
   action:
   - service: switch.turn_on
     entity_id: switch.everspring_se812_siren_switch_10_0
-  - service: notify.pushbullet
-    data:
-      message: 'ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
-      target: email/accyroy@gmail.com
   - data:
       title: 'Alarm Triggered'
       message: 'ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
@@ -96,10 +80,6 @@
     entity_id: alarm_control_panel.house
     to: 'warning'
   action:
-  - service: notify.pushbullet
-    data:
-      message: 'ALARM Warning {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
-      target: email/accyroy@gmail.com
   - data:
       title: 'Alarm Warning'
       message: 'ALARM Warning {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
