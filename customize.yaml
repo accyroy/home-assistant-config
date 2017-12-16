@@ -8,7 +8,7 @@
       friendly_name: Office Temp
       
     #Fibaro Motion Node 5 Ninas Room
-    binary_sensor.fninasroom_sensor:
+    binary_sensor.ninasroom_sensor:
      friendly_name: Ninas Room PIR
      device_class: motion
     sensor.ninasroom_luminance:
