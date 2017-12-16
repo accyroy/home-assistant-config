@@ -21,32 +21,32 @@ triggered_colour: 'red'
 ############# SENSOR GROUPS ########################
 # Sensors in this group tigger the alarm immediately
 immediate:
-  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
-  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
-  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_11_0
-  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
-  - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_24_0
-  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
-  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
-  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
-  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0
+  - binary_sensor.bathroom_sensor
+  - binary_sensor.conservatory_sensor
+  - binary_sensor.kitchen_sensor
+  - binary_sensor.livingroom_sensor
+  - binary_sensor.ninasroom_sensor	
+  - binary_sensor.office_sensor
+  - binary_sensor.roysroom_sensor
+  - binary_sensor.shed_sensor
+  - binary_sensor.upstairshall_sensor
 
 # Sensors in this group start the clock (pending_time) when tripped before the alarm is activated in 'Away' mode
 delayed:
-  - binary_sensor.aeotec_zw100_multisensor_6_sensor_18_0
+  - binary_sensor.downstairshall_sensor
 
 
 # Same as notathome but hopefully the title is more self explanatory. Can still use notathome for backwards compatibility
 # Note sensors can exist in more than one group notice top_floor appears in two groups
 homemodeignore:
-  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
-  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
-  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
-  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0
+  - binary_sensor.upstairshall_sensor
+  - binary_sensor.roysroom_sensor
+  - binary_sensor.ninasroom_sensor	
+  - binary_sensor.bathroom_sensor
   
 # Use this group to automatically override the warning message on open sensors when setting 'away' mode. (I use this as I have a motion sensor at the front door)
 override:
-  - binary_sensor.aeotec_zw100_multisensor_6_sensor_18_0
+  - binary_sensor.downstairshall_sensor
 
 # This group is special and only effects 'perimeter mode'. If perimeter_mode is enabled then any sensor in this group will trigger the alarm immediately if arm perimeter is set. There is no delayed group for this mode (unless requested as a feature of course!)
 #perimeter:
