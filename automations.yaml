@@ -9,9 +9,9 @@
       message: 'Alarm Away Mode Armed'
       target: email/accyroy@gmail.com
     service: notify.pushbullet
-#  - data:
-#      message: 'The house alarm has been switched on in away mode. Goodbye'
-#    service: notify.example_phone_tts
+  - data:
+      message: 'The house alarm has been switched on in away mode. Goodbye'
+    service: notify.nexus7
   - service: homeassistant.turnoff
     entity_id: group.lighting
 
@@ -26,9 +26,9 @@
       message: 'Alarm Home Mode Armed'
       target: email/accyroy@gmail.com
     service: notify.pushbullet
-#  - data:
-#      message: 'The house alarm has been switched on in home mode. Goodnight'
-#    service: notify.example_phone_tts
+  - data:
+      message: 'The house alarm has been switched on in home mode. Goodnight'
+    service: notify.nexus7
 
 - id: alarm_arming_away
   alias: '[Alarm] Away Mode Arming'
@@ -37,9 +37,9 @@
     entity_id: alarm_control_panel.house
     to: 'pending'
   action:
-#  - data:
-#      message: 'House alarm activating, ensure all doors and windows are closed'
-#    service: notify.example_phone_tts
+  - data:
+      message: 'House alarm activating, ensure all doors and windows are closed'
+    service: notify.nexus7
 
 - id: alarm_disarmed
   alias: '[Alarm] Disarmed'
@@ -54,9 +54,9 @@
       target: email/accyroy@gmail.com
   - service: switch.turn_off
     entity_id: switch.everspring_se812_siren_switch_10_0
-#  - data:
-#      message: 'The house alarm has been Deactivated'
-#    service: notify.example_phone_tts
+  - data:
+      message: 'The house alarm has been Deactivated'
+    service: notify.nexus7
 
       
 - id: alarm_triggered
@@ -84,9 +84,9 @@
     data:
       message: 'ALARM Warning {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
       target: email/accyroy@gmail.com
-#  - data:
-#      message: 'Hello, the house alarm has been tripped. Please deactivate'
-#    service: notify.example_phone_tts
+  - data:
+      message: 'Hello, the house alarm has been tripped. Please deactivate'
+    service: notify.nexus7
         
 
 
