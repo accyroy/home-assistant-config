@@ -70,6 +70,14 @@ netatmo:
   username: !secret netatmo_username
   password: !secret netatmo_password
   
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_apikey
+    allowed_chat_ids:
+      - !secret telegram_id1
+
+
+
 notify:
   - name: email
     platform: smtp
@@ -86,6 +94,10 @@ notify:
   - name: nexus7
     platform: lannouncer
     host: 192.168.1.6
+
+  - name: telegram
+    platform: telegram
+    chat_id: !secret telegram_id1
 
 sensor:
   - platform: darksky
