@@ -74,7 +74,7 @@
     data:
       title: 'Alarm Triggered'
       message: 'ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
-  - delay: '00:00:10'
+  - delay: '00:00:20'
   - service: notify.telegram
     data:
       title: 'Alarm Triggered'
