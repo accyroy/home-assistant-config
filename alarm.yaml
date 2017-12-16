@@ -7,7 +7,7 @@ alarm: automation.alarm_triggered
 warning: automation.alarm_warning
 
 clock: True  #Optional - True enables a clock in the center of the status bar
-perimeter_mode: False #Optional - True enables perimeter mode, this could be known as 'Day Mode' i.e. only arm the doors whilst there is someone using all floors
+#perimeter_mode: True #Optional - True enables perimeter mode, this could be known as 'Day Mode' i.e. only arm the doors whilst there is someone using all floors
 weather: True #Optional - Allows a weather summary to be displayed on the status bar. Dark Sky weather component must be enabled with the name sensor.dark_sky_summary
 
 #### COLOURS ###########  Use any HTML format
@@ -36,6 +36,10 @@ delayed:
   - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
   - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_24_0
   - binary_sensor.aeotec_zw100_multisensor_6_sensor_18_0
+  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
+  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
+  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
+  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0
 
 # Same as notathome but hopefully the title is more self explanatory. Can still use notathome for backwards compatibility
 # Note sensors can exist in more than one group notice top_floor appears in two groups
@@ -43,6 +47,7 @@ homemodeignore:
   - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
   - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
   - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
+  - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0
   
 # Use this group to automatically override the warning message on open sensors when setting 'away' mode. (I use this as I have a motion sensor at the front door)
 override:
