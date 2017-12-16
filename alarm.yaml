@@ -20,26 +20,21 @@ triggered_colour: 'red'
 
 ############# SENSOR GROUPS ########################
 # Sensors in this group tigger the alarm immediately
-#immediate:
-#  - binary_sensor.top_floor_multi_sensor_sensor
-#  - binary_sensor.lounge_multi_sensor_sensor
-#  - binary_sensor.toilet_window_sensor
-#  - binary_sensor.back_door_sensor
-#  - binary_sensor.lounge_doors_sensor
-#  - binary_sensor.kitchen_window_sensor
-
-# Sensors in this group start the clock (pending_time) when tripped before the alarm is activated in 'Away' mode
-delayed:
+immediate:
   - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_4_0
   - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
   - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_11_0
   - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_12_0
   - binary_sensor.fibaro_system_fgms001zw5_motion_sensor_sensor_24_0
-  - binary_sensor.aeotec_zw100_multisensor_6_sensor_18_0
   - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_7_0
   - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_8_0
   - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_16_0
   - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_5_0
+
+# Sensors in this group start the clock (pending_time) when tripped before the alarm is activated in 'Away' mode
+delayed:
+  - binary_sensor.aeotec_zw100_multisensor_6_sensor_18_0
+
 
 # Same as notathome but hopefully the title is more self explanatory. Can still use notathome for backwards compatibility
 # Note sensors can exist in more than one group notice top_floor appears in two groups
