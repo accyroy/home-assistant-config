@@ -10,6 +10,10 @@
       target: email/accyroy@gmail.com
     service: notify.pushbullet
   - data:
+      title: 'Alarm Away Mode Armed'
+      message: 'Alarm Away Mode Armed'
+    service: notify.telegram
+  - data:
       message: 'The house alarm has been switched on in away mode. Goodbye'
     service: notify.nexus7
   - service: homeassistant.turnoff
@@ -26,6 +30,10 @@
       message: 'Alarm Home Mode Armed'
       target: email/accyroy@gmail.com
     service: notify.pushbullet
+  - data:
+      title: 'Alarm Home Mode Armed'
+      message: 'Alarm Home Mode Armed'
+    service: notify.telegram
   - data:
       message: 'The house alarm has been switched on in home mode. Goodnight'
     service: notify.nexus7
@@ -52,6 +60,10 @@
     data:
       message: 'Alarm Disabled'
       target: email/accyroy@gmail.com
+  - data:
+      title: 'Alarm Disabled'
+      message: 'Alarm Disabled'
+    service: notify.telegram
   - service: switch.turn_off
     entity_id: switch.everspring_se812_siren_switch_10_0
   - data:
@@ -72,6 +84,10 @@
     data:
       message: 'ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
       target: email/accyroy@gmail.com
+  - data:
+      title: 'Alarm Triggered'
+      message: 'ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
+    service: notify.telegram      
       
 - id: alarm_warning
   alias: '[Alarm] Warning'
@@ -84,6 +100,10 @@
     data:
       message: 'ALARM Warning {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
       target: email/accyroy@gmail.com
+  - data:
+      title: 'Alarm Warning'
+      message: 'ALARM Warning {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
+    service: notify.telegram      
   - data:
       message: 'Hello, the house alarm has been tripped. Please deactivate'
     service: notify.nexus7
