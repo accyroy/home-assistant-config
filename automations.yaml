@@ -77,31 +77,14 @@
   - delay: '00:00:20'
   - service: notify.telegram
     data:
-      title: 'Alarm Triggered'
+      title: 'Alarm Triggered LR Video'
       message: 'ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
       data:
         video:
           file: /home/roy/.homeassistant/snapshots/lv.mp4
           caption: Living Room    
 
-- id: testtelegram
-  alias: TestTelegram
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_6_0
-    to: 'on'
-  action:
-  - service: shell_command.livingroomcreatevideo
-  - delay: '00:00:20'
-  - service: notify.telegram
-    data:
-      title: 'Test Video'
-      message: 'Test message'
-      data:
-        video:
-          file: /home/roy/.homeassistant/snapshots/lv.mp4
-          caption: Living Room    
-  
+
   
 - id: alarm_warning
   alias: '[Alarm] Warning'
