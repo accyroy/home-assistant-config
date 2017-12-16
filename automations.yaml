@@ -40,6 +40,10 @@
   - data:
       message: 'House alarm activating, ensure all doors and windows are closed'
     service: notify.nexus7
+  - data:
+      message: "chime"
+        data: 
+          method: "alarm"
 
 - id: alarm_disarmed
   alias: '[Alarm] Disarmed'
