@@ -70,14 +70,19 @@
   - service: switch.turn_on
     entity_id: switch.everspring_se812_siren_switch_10_0
   - service: shell_command.livingroomcreatevideo
-  - data:
+  - service: notify.telegram
+    data:
+      title: 'Alarm Triggered'
+      message: 'ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
+  - delay: '00:00:10'
+  - service: notify.telegram
+    data:
       title: 'Alarm Triggered'
       message: 'ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
       data:
         video:
-          - file: /home/roy/.homeassistant/snapshots/lv.mp4
-            caption: Living Room
-    service: notify.telegram
+          file: /home/roy/.homeassistant/snapshots/lv.mp4
+          caption: Living Room    
   
       
 - id: alarm_warning
