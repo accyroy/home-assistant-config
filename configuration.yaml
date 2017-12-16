@@ -99,6 +99,9 @@ notify:
     chat_id: !secret telegram_id1
 
 sensor:
+  - platform: bitcoin
+    display_options:
+      - exchangerate
   - platform: darksky
     api_key: !secret darksky_apikey
     monitored_conditions:
