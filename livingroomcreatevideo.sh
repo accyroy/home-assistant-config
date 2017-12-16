@@ -1,0 +1,4 @@
+#!/bin/bash
+rm -f /home/roy/.homeassistant/snapshots/* | vlc -q -I dummy http://192.168.1.194:81/mjpg/fr --video-filter=scene --vout=dummy --scene-format=jpg --scene-ratio=1 --scene-prefix=snapshot --scene-path=/home/roy/.homeassistant/snapshots --run-time 5 --scene-ratio=10 vlc://quit
+ls /home/roy/.homeassistant/snapshots | cat -n | while read n f; do mv "/home/roy/.homeassistant/snapshots/$f" "/home/roy/.homeassistant/snapshots/lv$n.jpg"; done
+convert -delay 100 /home/roy/.homeassistant/snapshots/lv1.jpg /home/roy/.homeassistant/snapshots/lv2.jpg /home/roy/.homeassistant/snapshots/lv3.jpg /home/roy/.homeassistant/snapshots/lv4.jpg /home/roy/.homeassistant/snapshots/lv5.jpg /home/roy/.homeassistant/snapshots/lv6.jpg /home/roy/.homeassistant/snapshots/lv7.jpg /home/roy/.homeassistant/snapshots/lv8.jpg /home/roy/.homeassistant/snapshots/lv9.jpg  /home/roy/.homeassistant/snapshots/lv.mp4
