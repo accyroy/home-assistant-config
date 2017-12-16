@@ -62,6 +62,7 @@ office:
     - switch.clockmonitor_switch
     - sensor.clockmonitor_power
     - camera.office
+    - media_player.office
     
 kitchen:
   name: Kitchen
@@ -79,6 +80,7 @@ conservatory:
     - binary_sensor.conservatory_sensor
     - switch.conservatorylights_switch
     - camera.conservatory
+    - media_player.conservatory
     
 ninasroom:
   name: Ninas Room
@@ -88,6 +90,7 @@ ninasroom:
     - sensor.ninasroom_temperature
     - binary_sensor.ninasroom_sensor
     - input_boolean.holiday_mode
+    - media_player.ninas_room
     
 roysroom:
   name: Roys Room
@@ -104,6 +107,7 @@ bathroom:
     - light.bathroom
     - sensor.bathroom_temperature
     - binary_sensor.bathroom_sensor
+    - media_player.roys_bedroom
       
 upstairshall:
   name: Upstairs Hall
