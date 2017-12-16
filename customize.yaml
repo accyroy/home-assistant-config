@@ -290,32 +290,32 @@
 
       
       
-    light.ninas_room_main_lamp:
-      emulated_hue: true
-      emulated_hue_name: "white room light"
+#    light.ninas_room_main_lamp:
+#      emulated_hue: true
+#      emulated_hue_name: "white room light"
       
-    script.nina_energize:
-      emulated_hue: true
-      emulated_hue_name: "white room energise"
-    script.nina_nightlight:
-      emulated_hue: true
-      emulated_hue_name: "white room nightlight"
+#    script.nina_energize:
+#      emulated_hue: true
+#      emulated_hue_name: "white room energise"
+#    script.nina_nightlight:
+#      emulated_hue: true
+#      emulated_hue_name: "white room nightlight"
     
-    light.roys_room_main_lamp:
-      emulated_hue: true
-      emulated_hue_name: "bedroom light"
+#    light.roys_room_main_lamp:
+#      emulated_hue: true
+#      emulated_hue_name: "bedroom light"
       
-    group.office_spots:
-      emulated_hue: true
-      emulated_hue_name: "office light"
+#    group.office_spots:
+#      emulated_hue: true
+#      emulated_hue_name: "office light"
     
-    group.frontroomlights:
-      emulated_hue: true
-      emulated_hue_name: "front room lights"
+#    group.frontroomlights:
+#      emulated_hue: true
+#      emulated_hue_name: "front room lights"
     
-    light.desk_lamp:
-      emulated_hue: true
-      emulated_hue_name: "desk lamp"
+#    light.desk_lamp:
+#      emulated_hue: true
+#      emulated_hue_name: "desk lamp"
       
     #Netatmo
     sensor.netatmo_indoor_co2:
