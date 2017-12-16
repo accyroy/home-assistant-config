@@ -151,7 +151,7 @@ light:
   
 zwave:
   usb_path: /dev/zwave
-  #new_entity_ids: false
+  new_entity_ids: false
   device_config: !include zwave_device_config.yaml
 
 mqtt: !include mqtt.yaml
