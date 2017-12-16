@@ -69,10 +69,12 @@
   action:
   - service: switch.turn_on
     entity_id: switch.everspring_se812_siren_switch_10_0
+  - service: shell_command.livingroomcreatevideo
   - data:
       title: 'Alarm Triggered'
       message: 'ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}'
-    service: notify.telegram      
+    service: notify.telegram
+  
       
 - id: alarm_warning
   alias: '[Alarm] Warning'
