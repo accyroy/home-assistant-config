@@ -121,8 +121,8 @@
       minutes: 6
       seconds: 0
   action:
-  - service: homeassistant.turn_off
-    entity_id: group.bathroom_spots
+  - service: light.turn_off
+    entity_id: light.bathroom
   
 - id: bathroom_light_on
   alias: 'Bathroom Light On'
@@ -227,8 +227,8 @@
       minutes: 5
       seconds: 0
   action:
-  - service: homeassistant.turn_off
-    entity_id: group.kitchen_spots
+  - service: light.turn_off
+    entity_id: light.kitchen
    
 - id: kitchen_lights_on
   alias: 'Kitchen Light On'
@@ -238,8 +238,8 @@
     entity_id: binary_sensor.kitchen_sensor
     to: 'on'
   action:
-  - service: scene.turn_on
-    entity_id: scene.kitchen_fade_on
+  - service: light.turn_on
+    entity_id: light.kitchen
   
 - id: ninas_light_wake
   alias: 'Ninass Light Wake Up'
