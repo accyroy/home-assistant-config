@@ -13,3 +13,6 @@
 - platform: mjpeg
   mjpeg_url: !secret fr_url
   name: Front Room
+- platform: mjpeg
+  mjpeg_url: !secret serv_url
+  name:Server Room
