@@ -5,6 +5,7 @@ default_view:
    - group.office
    - group.kitchen
    - group.conservatory
+   - group.serverroom
    - group.outside
    - group.bathroom
    - group.ninasroom
@@ -23,6 +24,7 @@ downstairs:
     - group.conservatory
     - group.downstairshall
     - group.outside
+    - group.serverroom
   
 upstairs:
   name: Upstairs
