@@ -126,6 +126,13 @@ downstairshall:
     - sensor.downstairshall_relative_humidity
     - sensor.downstairshall_temperature
 
+serverroom:
+  name: Server Room
+  view: no
+  entities:
+    - camera.server_room
+    - sensor.serverroom_temperature
+
 outside:
   name: Outside
   view: no
@@ -158,6 +165,7 @@ cameras:
     - camera.conservatory
     - camera.front_drive
     - camera.back_garden
+    - camera.server_room
     
       
 unit:
