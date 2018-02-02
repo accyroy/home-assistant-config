@@ -15,4 +15,4 @@
   name: Front Room
 - platform: mjpeg
   mjpeg_url: !secret serv_url
-  name:Server Room
+  name: Server Room
