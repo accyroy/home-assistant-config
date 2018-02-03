@@ -240,7 +240,32 @@
   action:
   - service: light.turn_on
     entity_id: light.kitchen
-  
+    
+- id: serverroom_lights_on
+  alias: 'ServerRoom Light On'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.serverroom_sensor
+    to: 'on'
+  action:
+  - service: light.turn_on
+    entity_id: light.lamp
+    
+- id: serverroom_lights_off
+  alias: 'Kitchen Light Off'
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.serverroom_sensor
+    to: 'off'
+    for:
+      minutes: 5
+      seconds: 0
+  action:
+  - service: light.turn_off
+    entity_id: light.lamp
+
 - id: ninas_light_wake
   alias: 'Ninass Light Wake Up'
   hide_entity: True
