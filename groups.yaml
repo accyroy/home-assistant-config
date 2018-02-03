@@ -136,6 +136,7 @@ serverroom:
   view: no
   entities:
     - camera.server_room
+    - sensor.ha_cpu_temp
     - sensor.serverroom_temperature
     - binary_sensor.serverroom_sensor
     - switch.serverroomfan_switch
