@@ -135,6 +135,7 @@ serverroom:
     - camera.server_room
     - sensor.serverroom_temperature
     - binary_sensor.serverroom_sensor
+    - switch.serverroomfan_switch
 
 outside:
   name: Outside
