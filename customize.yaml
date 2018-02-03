@@ -183,7 +183,7 @@
       friendly_name: Siren
     
     #node 29
-    switch.serverroomfan_switch
+    switch.serverroomfan_switch:
       friendly_name: Fan
     
 
