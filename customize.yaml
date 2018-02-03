@@ -160,6 +160,14 @@
       friendly_name: Outdoor Temp
     
     
+    #node 25 downstairs smoke detector
+    sensor.fibaro_system_fgsd002_smoke_sensor_temperature:
+      friendly_name: Office SD Temp
+      
+    #node 28 upstairs smoke detector
+    sensor.fibaro_system_fgss101_smoke_sensor_temperature:
+      friendly_name: Upstairs SD Temp
+    
     
     switch.securitylights_switch:
       friendly_name: Broken Output Always On
