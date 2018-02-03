@@ -140,6 +140,7 @@ serverroom:
     - sensor.serverroom_temperature
     - binary_sensor.serverroom_sensor
     - switch.serverroomfan_switch
+    - light.lamp
 
 outside:
   name: Outside
