@@ -28,6 +28,8 @@ ios:
 
 recorder:
   db_url: !secret recorder_db_url
+  purge_interval: 2
+  purge_keep_days: 7
   
 zone: !include_dir_list zone
 automation: !include automations.yaml
