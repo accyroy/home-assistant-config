@@ -136,7 +136,10 @@ sensor:
     name: HA CPU Temp
     command: 'cat /sys/class/thermal/thermal_zone0/temp'
     unit_of_measurement: '°C'
-    value_template: '{{ value | multiply(0.001) }}'        
+    value_template: '{{ value | multiply(0.001) }}' 
+  - platform: snmp
+    host: 192.168.1.150
+    baseoid: 1.3.6.1.4.1.2021.10.1.3.1
     
       
 
