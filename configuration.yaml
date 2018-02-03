@@ -134,7 +134,7 @@ sensor:
         friendly_name: Xbox Status
   - platform: command_line
     name: HA CPU Temp
-    command: 'cat /sys/class/thermal/thermal_zone0/temp'
+    command: 'cat /sys/class/thermal/thermal_zone2/temp'
     unit_of_measurement: '°C'
     value_template: '{{ value | multiply(0.001) }}' 
   - platform: snmp
