@@ -287,21 +287,6 @@
   action:
   - service: switch.turn_on
     entity_id: switch.clockmonitor_switch
-    
-- id: outside_lights_off
-  alias: 'Outside Light Off'
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.frontdrive_sensor
-    to: 'off'
-    for:
-      minutes: 2
-      seconds: 0
-  action:
-  - service: light.turn_off
-    entity_id: light.front_drive_lamp
-
 
 - id: someoneatfrontdoor
   alias: 'Front Door Motion'
@@ -318,20 +303,6 @@
     service: notify.nexus7
 
 
-- id: outside_lights_on
-  alias: 'Outside Light On'
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.frontdrive_sensor
-    to: 'on'
-  condition:
-    condition: state
-    entity_id: sun.sun
-    state: 'below_horizon'
-  action:
-  - service: scene.turn_on
-    entity_id: scene.outside_front_normal
     
 - id: roys_light_off
   alias: 'Roys Light Off'
