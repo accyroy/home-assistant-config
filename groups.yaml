@@ -115,7 +115,7 @@ upstairshall:
   name: Upstairs Hall
   view: no
   entities:
-    - light.upstairshalldim_level
+    - light.upstairshalldim_level_2
     - sensor.upstairshall_temperature
     - binary_sensor.upstairshall_sensor
     
@@ -126,7 +126,7 @@ downstairshall:
     - climate.house
     - sensor.house_thermostat_temperature
     - sensor.house_thermostat_target
-    - light.downstairshalldim_level
+    - light.downstairshalldim_level_2
     - binary_sensor.downstairshall_sensor
     - sensor.downstairshall_relative_humidity
     - sensor.house_thermostat_humidity
