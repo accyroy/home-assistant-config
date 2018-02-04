@@ -135,6 +135,7 @@
      #Aeotec Motion Sensor Node 18 Downstairs Hall
     binary_sensor.downstairshall_sensor:
       friendly_name: Downstairs Hall PIR
+      device_class: motion
     sensor.downstairshall_luminance:
       friendly_name: Downstairs Hall Lux
     sensor.downstairshall_relative_humidity:
