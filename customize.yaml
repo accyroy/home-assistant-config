@@ -121,11 +121,11 @@
 
 
     #Fibaro Dimmer Node 14 Downstairs Hall
-    light.downstairshalldim_level_2:
+    light.downstairshalldim_level:
       friendly_name: Downstairs Hall Light
 
     #Fibaro Dimmer Node 17 Upstairs Hall
-    light.upstairshalldim_level_2:
+    light.upstairshalldim_level:
       friendly_name: Upstairs Hall Light
       
     #Fibaro RGBW Node 15 Living Room Screen Surround
