@@ -131,6 +131,8 @@ downstairshall:
     - sensor.downstairshall_relative_humidity
     - sensor.house_thermostat_humidity
     - sensor.downstairshall_temperature
+    - switch.nexus7_screen
+    - sensor.nexus7_battery_level
 
 serverroom:
   name: Server Room
