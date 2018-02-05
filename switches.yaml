@@ -1,0 +1,8 @@
+- platform: command_line
+  switches:
+    nexus7_screen:
+      command_on: !secret nexus7_screen_on
+      command_off: !secret nexus7_screen_off
+      command_state: !secret nexus7_screen_state
+      value_template: '{{ value == "on" }}'
+      friendly_name: Nexus 7 Screen
