@@ -35,6 +35,7 @@ input_boolean: !include input_boolean.yaml
 group: !include groups.yaml
 camera: !include cameras.yaml
 shell_command: !include shell_commands.yaml
+switch: !include switches.yaml
 
 #emulated_hue:
 #  host_ip: 192.168.1.131
