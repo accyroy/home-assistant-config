@@ -83,6 +83,7 @@ conservatory:
     - switch.conservatorylights_switch
     - camera.conservatory
     - media_player.conservatory
+    - sensor.washingmachine_power
     
 ninasroom:
   name: Ninas Room
@@ -143,6 +144,7 @@ serverroom:
     - sensor.serverroom_temperature
     - binary_sensor.serverroom_sensor
     - switch.serverroomfan_switch
+    - sensor.serverroomfan_power
     - light.lamp
 
 outside:
