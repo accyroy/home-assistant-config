@@ -186,6 +186,15 @@
     #node 29
     switch.serverroomfan_switch:
       friendly_name: Fan
+    sensor.serverroomfan_power:
+      friendly_name: Fan Power
+      
+    #node 30
+    switch.washingmachine_switch:
+      friendly_name: Washing Machine
+    sensor.washingmachine_power:
+      friendly_name: Washing Machine Power
+      unit_of_measurement: 'W'
     
 
     sensor.clockmonitor_power:
