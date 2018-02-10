@@ -83,7 +83,14 @@ conservatory:
     - switch.conservatorylights_switch
     - camera.conservatory
     - media_player.conservatory
+    - switch.washingmachine_switch
     - sensor.washingmachine_power
+    - switch.dryer_switch
+    - sensor.dryer_power
+    - sensor.dryer_voltage
+    - switch.underfloorheating_switch
+    - sensor.underfloorheating_power
+
     
 ninasroom:
   name: Ninas Room
