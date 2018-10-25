@@ -61,8 +61,6 @@ office:
     - light.desk_lamp
     - sensor.office_temperature
     - binary_sensor.office_sensor
-    - switch.clockmonitor_switch
-    - sensor.clockmonitor_power
     - camera.office
     - media_player.office
     
@@ -109,6 +107,8 @@ roysroom:
     - light.roys_room
     - sensor.roysroom_temperature
     - binary_sensor.roysroom_sensor
+    - switch.clockmonitor_switch
+    - sensor.clockmonitor_power
 
 bathroom:
   name: Bathroom
