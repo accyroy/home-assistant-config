@@ -129,30 +129,6 @@
   - service: input_boolean.turn_on
     entity_id: input_boolean.nina_waking_up
     
-- id: clock_off
-  alias: 'Switch Clock Off'
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.office_sensor
-    to: 'off'
-    for:
-      minutes: 30
-      seconds: 30
-  action:
-  - service: switch.turn_off
-    entity_id: switch.clockmonitor_switch
-    
-- id: clock_on
-  alias: 'Switch Clock On'
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.office_sensor
-    to: 'on'
-  action:
-  - service: switch.turn_on
-    entity_id: switch.clockmonitor_switch
 
 - id: someoneatfrontdoor
   alias: 'Front Door Motion'
