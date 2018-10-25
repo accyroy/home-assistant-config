@@ -198,9 +198,9 @@
     
 
     sensor.clockmonitor_power:
-      friendly_name: Clock Power
+      friendly_name: EB Power
     switch.clockmonitor_switch:
-      friendly_name: Clock Monitor
+      friendly_name: EB
       
     sensor.darthchickens:
       friendly_name: Xbox One
