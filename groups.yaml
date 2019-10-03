@@ -2,6 +2,7 @@ default_view:
   name: Overview
   view: yes
   entities:
+   - configurator.philips_hue
    - group.livingroom
    - group.office
    - group.kitchen
